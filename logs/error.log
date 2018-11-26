@@ -1,0 +1,194 @@
+[13-Nov-2018 10:27:36 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 7
+[13-Nov-2018 10:30:55 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 8
+[13-Nov-2018 10:31:06 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 8
+[13-Nov-2018 10:31:07 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 8
+[13-Nov-2018 10:31:07 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 8
+[13-Nov-2018 10:31:19 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 8
+[13-Nov-2018 10:32:41 Europe/Berlin] PHP Warning:  Use of undefined constant display_errors - assumed 'display_errors' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\public\index.php on line 11
+[13-Nov-2018 10:32:41 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 14
+[13-Nov-2018 10:32:42 Europe/Berlin] PHP Warning:  Use of undefined constant display_errors - assumed 'display_errors' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\public\index.php on line 11
+[13-Nov-2018 10:32:42 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 14
+[13-Nov-2018 10:33:01 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 14
+[13-Nov-2018 10:33:06 Europe/Berlin] PHP Warning:  Use of undefined constant display_errors - assumed 'display_errors' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\public\index.php on line 11
+[13-Nov-2018 10:33:06 Europe/Berlin] PHP Notice:  Undefined variable: var in C:\xampp\htdocs\proiect_php\public\index.php on line 14
+[20-Nov-2018 09:34:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Router' not found in C:\xampp\htdocs\proiect_php\public\index.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 17
+[20-Nov-2018 09:36:19 Europe/Berlin] PHP Warning:  Use of undefined constant ‘REQUEST_URI‘ - assumed '‘REQUEST_URI‘' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:36:19 Europe/Berlin] PHP Notice:  Undefined index: ‘REQUEST_URI‘ in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:40:01 Europe/Berlin] PHP Warning:  Use of undefined constant ‘REQUEST_URI‘ - assumed '‘REQUEST_URI‘' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:40:01 Europe/Berlin] PHP Notice:  Undefined index: ‘REQUEST_URI‘ in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:40:26 Europe/Berlin] PHP Warning:  Use of undefined constant ‘REQUEST_URI‘ - assumed '‘REQUEST_URI‘' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:40:26 Europe/Berlin] PHP Notice:  Undefined index: ‘REQUEST_URI‘ in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:41:15 Europe/Berlin] PHP Warning:  Use of undefined constant ‘REQUEST_URI‘ - assumed '‘REQUEST_URI‘' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:41:15 Europe/Berlin] PHP Notice:  Undefined index: ‘REQUEST_URI‘ in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:41:18 Europe/Berlin] PHP Warning:  Use of undefined constant ‘REQUEST_URI‘ - assumed '‘REQUEST_URI‘' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 09:41:18 Europe/Berlin] PHP Notice:  Undefined index: ‘REQUEST_URI‘ in C:\xampp\htdocs\proiect_php\src\Router.php on line 7
+[20-Nov-2018 10:17:52 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\proiect_php\src\Router.php on line 17
+[20-Nov-2018 10:34:35 Europe/Berlin] PHP Warning:  Illegal string offset 'action' in C:\xampp\htdocs\proiect_php\src\Router.php on line 17
+[20-Nov-2018 10:38:55 Europe/Berlin] PHP Recoverable fatal error:  Object of class Router could not be converted to string in C:\xampp\htdocs\proiect_php\src\Router.php on line 19
+[20-Nov-2018 10:39:51 Europe/Berlin] PHP Notice:  Trying to get property 'addUserAction' of non-object in C:\xampp\htdocs\proiect_php\src\Router.php on line 23
+[26-Nov-2018 12:50:23 Europe/Berlin] PHP Notice:  Trying to get property 'addUserAction' of non-object in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:55:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:56:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:56:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:56:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:56:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:56:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:57:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:57:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:57:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 21
+[26-Nov-2018 12:59:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::route_url() in C:\xampp\htdocs\proiect_php\public\index.php:18
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 18
+[26-Nov-2018 12:59:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::route_url() in C:\xampp\htdocs\proiect_php\public\index.php:18
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 18
+[26-Nov-2018 12:59:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:20
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(18): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 20
+[26-Nov-2018 13:29:41 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\src\Router.php on line 19
+[26-Nov-2018 13:30:03 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\src\Router.php on line 19
+[26-Nov-2018 13:30:04 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\src\Router.php on line 19
+[26-Nov-2018 13:37:27 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function UserController::getUserByIdAction(), 0 passed in C:\xampp\htdocs\proiect_php\src\Router.php on line 33 and exactly 1 expected in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:5
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(33): UserController->getUserByIdAction()
+#1 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 5
+[26-Nov-2018 13:39:40 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 29
+[26-Nov-2018 13:39:40 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:39:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:32
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 32
+[26-Nov-2018 13:39:52 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 29
+[26-Nov-2018 13:39:52 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:39:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:32
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 32
+[26-Nov-2018 13:41:52 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:41:52 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:41:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:42:11 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 7
+[26-Nov-2018 13:42:11 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:42:11 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:42:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:43:14 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 7
+[26-Nov-2018 13:43:14 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:43:14 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:43:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:44:39 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 7
+[26-Nov-2018 13:44:39 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:44:39 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:44:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:45:03 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 8
+[26-Nov-2018 13:45:03 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:45:03 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:45:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:45:18 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:45:18 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:45:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:45:48 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:45:48 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:45:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:47:26 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:47:26 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:47:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:47:42 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:47:42 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:47:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:47:47 Europe/Berlin] PHP Notice:  Undefined index: /user/s in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:47:47 Europe/Berlin] PHP Notice:  Undefined index: /user/s in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:47:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 13:47:47 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 27
+[26-Nov-2018 13:47:47 Europe/Berlin] PHP Notice:  Undefined index: /favicon.ico in C:\xampp\htdocs\proiect_php\src\Router.php on line 28
+[26-Nov-2018 13:47:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30

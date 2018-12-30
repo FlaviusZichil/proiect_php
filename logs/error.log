@@ -192,3 +192,403 @@ Stack trace:
 #0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
 #1 {main}
   thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[26-Nov-2018 18:17:41 Europe/Berlin] PHP Recoverable fatal error:  Object of class Router could not be converted to string in C:\xampp\htdocs\proiect_php\src\Router.php on line 45
+[26-Nov-2018 18:22:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:58
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 58
+[26-Nov-2018 18:26:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:53
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 53
+[26-Nov-2018 18:26:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:53
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 53
+[26-Nov-2018 18:29:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[26-Nov-2018 18:29:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getActionFromUri() in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[26-Nov-2018 18:30:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[26-Nov-2018 18:30:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[26-Nov-2018 18:31:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[26-Nov-2018 18:31:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[26-Nov-2018 18:31:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(19): Router->route_url()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[27-Nov-2018 09:38:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(21): Router->get_resource_from_uri()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[27-Nov-2018 09:40:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(22): Router->get_resource_from_uri()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[27-Nov-2018 09:40:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:39
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(22): Router->get_resource_from_uri()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 39
+[27-Nov-2018 09:47:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Router' not found in C:\xampp\htdocs\proiect_php\public\index.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 21
+[27-Nov-2018 09:47:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Router' not found in C:\xampp\htdocs\proiect_php\public\index.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 21
+[27-Nov-2018 09:48:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Router' not found in C:\xampp\htdocs\proiect_php\public\index.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 21
+[27-Nov-2018 09:48:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Router' not found in C:\xampp\htdocs\proiect_php\public\index.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 21
+[27-Nov-2018 09:48:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Router' not found in C:\xampp\htdocs\proiect_php\public\index.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 21
+[27-Nov-2018 09:48:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Router' not found in C:\xampp\htdocs\proiect_php\public\index.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\proiect_php\public\index.php on line 21
+[27-Nov-2018 09:50:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:41
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#1 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 41
+[27-Nov-2018 10:22:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:30
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(50): Router->call_controller_action('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(21): Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 30
+[27-Nov-2018 10:23:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:31
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(50): Router->call_controller_action('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 31
+[27-Nov-2018 10:25:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(52): Router->action_from_controller('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[27-Nov-2018 10:25:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(52): Router->action_from_controller('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[27-Nov-2018 10:29:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class '\App\ControllersUserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(53): Framework\Router->action_from_controller('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[27-Nov-2018 10:31:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class '\App\ControllersUserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(53): Framework\Router->action_from_controller('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[27-Nov-2018 10:33:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'App\ControllersUserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(53): Framework\Router->action_from_controller('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[27-Nov-2018 10:35:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'App\ControllersUserController' not found in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(45): Framework\Router->action_from_controller('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[27-Nov-2018 10:36:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:34
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(45): Framework\Router->action_from_controller('/user/{id}', Array)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 34
+[27-Nov-2018 10:39:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\UserController::UserController() in C:\xampp\htdocs\proiect_php\src\Router.php:22
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(46): Framework\Router->action_from_controller('/user/add', NULL)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 22
+[27-Nov-2018 10:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 21
+[27-Nov-2018 10:40:17 Europe/Berlin] PHP Stack trace:
+[27-Nov-2018 10:40:17 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[27-Nov-2018 10:40:17 Europe/Berlin] PHP   2. Framework\Router->get_resource_from_uri() C:\xampp\htdocs\proiect_php\public\index.php:22
+[27-Nov-2018 10:40:17 Europe/Berlin] PHP   3. Framework\Router->action_from_controller($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[27-Nov-2018 10:40:17 Europe/Berlin] PHP   4. App\Controllers\UserController->deleteUserAction($id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:22
+[27-Nov-2018 10:42:31 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Framework\Router::action_from_controller() must be of the type array, null given, called in C:\xampp\htdocs\proiect_php\src\Router.php on line 46 and defined in C:\xampp\htdocs\proiect_php\src\Router.php:14
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(46): Framework\Router->action_from_controller('/user/add', NULL)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 14
+[27-Nov-2018 10:42:43 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Framework\Router::action_from_controller() must be of the type array, null given, called in C:\xampp\htdocs\proiect_php\src\Router.php on line 46 and defined in C:\xampp\htdocs\proiect_php\src\Router.php:14
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(46): Framework\Router->action_from_controller('/user/add', NULL)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 14
+[27-Nov-2018 10:44:47 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Framework\Router::action_from_controller() must be of the type array, null given, called in C:\xampp\htdocs\proiect_php\src\Router.php on line 46 and defined in C:\xampp\htdocs\proiect_php\src\Router.php:14
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(46): Framework\Router->action_from_controller('/user/add', NULL)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(22): Framework\Router->get_resource_from_uri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 14
+[27-Nov-2018 12:29:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Twig_Loader_Filesystem' not found in C:\xampp\htdocs\proiect_php\src\BaseController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(19): Framework\BaseController->__construct()
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(31): Framework\Router->applyActionFromController('/user/{id}', Array)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(20): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\BaseController.php on line 11
+[04-Dec-2018 09:14:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Twig_Loader_Filesystem' not found in C:\xampp\htdocs\proiect_php\src\BaseController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(19): Framework\BaseController->__construct()
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(43): Framework\Router->applyActionFromController('/user/add', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(20): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\BaseController.php on line 11
+[04-Dec-2018 09:30:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Twig_Loader_Filesystem' not found in C:\xampp\htdocs\proiect_php\src\BaseController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(19): Framework\BaseController->__construct()
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(43): Framework\Router->applyActionFromController('/user/add', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(20): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\BaseController.php on line 11
+[04-Dec-2018 10:38:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Twig_Loader_Filesystem' not found in C:\xampp\htdocs\proiect_php\src\BaseController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(19): Framework\BaseController->__construct()
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(43): Framework\Router->applyActionFromController('/user/add', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(20): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\BaseController.php on line 11
+[04-Dec-2018 10:48:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Twig_Loader_Filesystem' not found in C:\xampp\htdocs\proiect_php\src\BaseController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(19): Framework\BaseController->__construct()
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(43): Framework\Router->applyActionFromController('/user/add', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(20): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\BaseController.php on line 11
+[04-Dec-2018 10:49:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Twig_Loader_Filesystem' not found in C:\xampp\htdocs\proiect_php\src\BaseController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(19): Framework\BaseController->__construct()
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(43): Framework\Router->applyActionFromController('/user/add', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(20): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\BaseController.php on line 11
+[04-Dec-2018 10:50:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Twig_Loader_Filesystem' not found in C:\xampp\htdocs\proiect_php\src\BaseController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(19): Framework\BaseController->__construct()
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(43): Framework\Router->applyActionFromController('/user/add', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(20): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\BaseController.php on line 11
+[04-Dec-2018 16:35:24 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 16:35:24 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 16:35:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 16:35:25 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 16:35:25 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 16:35:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:28:07 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:28:07 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:28:07 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:28:08 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:28:08 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:28:08 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:28:08 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:28:08 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:28:08 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:28:09 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:28:09 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:28:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:29:49 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:29:49 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:29:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:29:50 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:29:50 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:29:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:30:25 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:30:25 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:30:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:30:25 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:30:25 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:30:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:30:28 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:30:28 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:30:28 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:30:29 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:30:29 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:30:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:30:32 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:30:32 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:30:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:30:32 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:30:32 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:30:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:42:01 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:42:01 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:42:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:42:01 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:42:01 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:42:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:42:13 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:42:13 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:42:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:42:14 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:42:14 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:42:14 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:42:19 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:42:19 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:42:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:42:19 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:42:19 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:42:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:43:33 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:43:33 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:43:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:43:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:13 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:13 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:13 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:13 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:14 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:14 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:14 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:14 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:14 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:14 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:15 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:15 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:15 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:15 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:21 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:21 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:21 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:21 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:22 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:22 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:23 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:23 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:53 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:53 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:53 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:53 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:56 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:56 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:44:57 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:44:57 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:44:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:00 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:00 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:00 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:00 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:13 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:13 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:14 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:14 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:14 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:31 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:31 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:31 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:32 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:32 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:38 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:38 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:40 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:40 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:44 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:44 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:44 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:44 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:53 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:53 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:54 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:54 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:54 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:54 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:59 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:59 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[04-Dec-2018 17:45:59 Europe/Berlin] PHP Notice:  Undefined variable: config in C:\xampp\htdocs\proiect_php\public\index.php on line 13
+[04-Dec-2018 17:45:59 Europe/Berlin] PHP Stack trace:
+[04-Dec-2018 17:45:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[30-Dec-2018 10:59:43 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1 in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php:65
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php(65): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(33): App\Controllers\RegisterController->register(NULL)
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(56): Framework\Router->applyActionFromController('/register/auth/', NULL)
+#3 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#4 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 65
+[30-Dec-2018 11:00:30 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1 in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php:65
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php(65): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(33): App\Controllers\RegisterController->register(NULL)
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(56): Framework\Router->applyActionFromController('/register/auth/', NULL)
+#3 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#4 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 65

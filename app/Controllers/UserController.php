@@ -1,21 +1,36 @@
 <?php
 
-class UserController
+namespace App\Controllers;
+
+use App\Models\User;
+use Framework\Controller;
+
+class UserController extends Controller
 {
-    public function getUserByIdAction($id)
+    public function getUserByIdAction($id): void
     {
-        echo "Sunt userul cu id-ul: ";
-        echo $id[0];
+        echo "This is the user with id ".$id;
     }
 
-    public function addUserAction()
+    public function addUserAction(): void
     {
         echo "New user added";
     }
 
-    public function deleteUserAction($id)
+    public function deleteUserAction($id): void
     {
-        echo "A fost sters user-ul cu id: ";
-        echo $id[0];
+        echo "The user with id ".$id." has been deleted";
     }
+
+    public function showUser()
+    {
+        /** @noinspection PhpVoidFunctionResultUsedInspection */
+        echo $this->view("User/ShowUser.html", ["name" => "Flavius"]);
+    }
+
+    public function getAllUsers(){
+        $user = new User();
+        $user->getAll();
+    }
+
 }

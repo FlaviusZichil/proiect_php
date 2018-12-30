@@ -1,14 +1,39 @@
 <?php
+namespace Framework;
+
 class Router
 {
     protected $routes;
+    private $error_message = "Resource not found";
 
     public function __construct($routes)
     {
         $this->routes = $routes;
     }
 
-    public function route_url()
+    private function checkGuard(string $route): void
+    {
+        if (isset($this->routes[$route]['guard']))
+        {
+
+            $guard = "\\App\\Guards\\".$this->routes[$route]['guard'];
+
+            (new $guard)->handle();
+	    }
+    }
+
+    private function applyActionFromController($uri, $id): void
+    {
+        $this->checkGuard($uri);
+
+        $controller = "App\\Controllers\\".$this->routes[$uri]['controller'];
+        $action = $this->routes[$uri]['action'];
+
+        $controller = new $controller();
+        $controller->$action($id[0]);
+    }
+
+    public function getResourceFromUri(): void
     {
         if (preg_match('/\d+/', $_SERVER['REQUEST_URI'], $id))
         {
@@ -16,32 +41,23 @@ class Router
 
             if(isset($this->routes[$dynamic_uri]))
             {
-                $controller = $this->routes[$dynamic_uri]['controller'];
-                $action = $this->routes[$dynamic_uri]['action'];
-
-                $controller = new $controller();
-                $controller->$action($id);
+                $this->applyActionFromController($dynamic_uri, $id);
             }
             else
             {
-                echo "Resource not found";
+                echo $this->error_message;
             }
-
         } else {
 
             $static_uri = $_SERVER['REQUEST_URI'];
 
             if(isset($this->routes[$static_uri]))
             {
-                $controller = $this->routes[$static_uri]['controller'];
-                $action = $this->routes[$static_uri]['action'];
-
-                $controller = new $controller();
-                $controller->$action();
+                $this->applyActionFromController($static_uri, null);
             }
             else
             {
-                echo "Resource not found";
+                echo $this->error_message;
             }
         }
     }

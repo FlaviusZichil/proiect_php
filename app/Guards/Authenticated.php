@@ -10,7 +10,7 @@ class Authenticated implements Guard
     {
         session_start();
 
-        if(!isset($_SESSION['username']))
+        if(!isset($_SESSION['firstName']))
         {
             $this->reject();
         }

@@ -50,11 +50,20 @@ abstract class Model
     /**
      *Return data with specified id/index
      */
-    public function get($id)
+    public function getById($id)
     {
         $db = $this->newDbCon();
         $stmt = $db->prepare("SELECT * FROM $this->table WHERE id=?");
         $stmt->execute([$id]);
+
+        return $stmt->fetch();
+    }
+
+    public function getByEmail(string $email)
+    {
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT email FROM $this->table WHERE email=?");
+        $stmt->execute([$email]);
 
         return $stmt->fetch();
     }
@@ -72,11 +81,11 @@ abstract class Model
         for($i = 0; $i < count($data); $i++) {
 
              $values[]= $data[$i];
-             $columns .= "key($data) = ? "; // modificat
+             $columns .= "key($data) = ? ";
              //if we are not at the last element with the iteration
              if(count($data) < ($i + 1))
              {
-                 $columns .= "AND "; // modificat
+                 $columns .= "AND ";
              }
         }
         return [$columns, $values];
@@ -113,5 +122,4 @@ abstract class Model
     public function delete($id)
     {
     }
-
 }

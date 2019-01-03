@@ -15,9 +15,7 @@ class Router
     {
         if (isset($this->routes[$route]['guard']))
         {
-
             $guard = "\\App\\Guards\\".$this->routes[$route]['guard'];
-
             (new $guard)->handle();
 	    }
     }

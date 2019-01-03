@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Models;
 
@@ -16,5 +16,29 @@ class User extends Model{
 
         $stmt = $pdo -> prepare($sql);
         $stmt -> execute([$first_name, $second_name, $email, $password]);
+    }
+
+    function loginUser(string $email, $password){
+        $pdo = $this->newDbCon();
+
+        $sql = "SELECT * FROM user WHERE 'email'=?";
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute([$email]);
+
+        if ($row = $stmt->fetch()) {
+            if($row && password_verify($password, $row['password'])) {
+                session_start();
+                $_SESSION["firstName"] = $row["firstName"];
+                $_SESSION["secondName"] = $row["secondName"];
+                $_SESSION["email"] = $row["email"];
+                header("location: /user/");
+            }
+        }else{
+            header("location: /login/");
+        }
+    }
+
+    public function getUserByEmail(string $email){
+        return $this->getByEmail($email);
     }
 }

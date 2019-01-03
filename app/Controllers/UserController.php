@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Trip;
 use App\Models\User;
 use Framework\Controller;
 
@@ -28,9 +29,16 @@ class UserController extends Controller
         echo $this->view("User/ShowUser.html", ["name" => "Flavius"]);
     }
 
-    public function getAllUsers(){
-        $user = new User();
-        $user->getAll();
-    }
+    public function userPageAction(){
+        session_start();
+        $firstName = $_SESSION["firstName"];
+        $secondName = $_SESSION["secondName"];
+        $email = $_SESSION["email"];
 
+        $trip = new Trip();
+        $allTrips = $trip->getAllTrips();
+
+        /** @noinspection PhpVoidFunctionResultUsedInspection */
+        echo $this->view("User/userView.html", ["firstName" => $firstName, "secondName" => $secondName, "email" => $email, "allTrips" => $allTrips]);
+    }
 }

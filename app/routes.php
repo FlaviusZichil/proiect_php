@@ -12,9 +12,9 @@
 
         '/register/' =>              ['controller' => 'RegisterController', 'action' => 'registerPageAction'],
 
-        '/register/auth/' =>         ['controller' => 'RegisterController', 'action' => 'register', 'params' => ['registerFirstName', 'registerSecondName', 'registerEmail', 'registerPassword' ]],
+        '/register/auth/' =>         ['controller' => 'RegisterController', 'action' => 'register'],
 
-        '/user/add' =>               ['controller' => 'UserController', 'action' => 'addUserAction', 'guard' => "Authenticated"],
+        '/user/' =>                  ['controller' => 'UserController', 'action' => 'userPageAction', 'guard' => "Authenticated"],
 
         '/user/{id}' =>              ['controller' => 'UserController', 'action' => 'getUserByIdAction', 'guard' => "Authenticated"],
 

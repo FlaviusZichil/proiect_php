@@ -592,3 +592,284 @@ Stack trace:
 #3 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
 #4 {main}
   thrown in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 65
+[30-Dec-2018 15:02:29 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to App\Controllers\RegisterController::register() must be of the type string, null given, called in C:\xampp\htdocs\proiect_php\src\Router.php on line 33 and defined in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php:17
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(33): App\Controllers\RegisterController->register(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(56): Framework\Router->applyActionFromController('/register/auth/', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 17
+[30-Dec-2018 15:05:44 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to App\Controllers\RegisterController::register() must be of the type string, null given, called in C:\xampp\htdocs\proiect_php\src\Router.php on line 33 and defined in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php:17
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(33): App\Controllers\RegisterController->register(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(56): Framework\Router->applyActionFromController('/register/auth/', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 17
+[02-Jan-2019 12:22:54 Europe/Berlin] PHP Notice:  Undefined variable: row in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 28
+[02-Jan-2019 12:22:54 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 12:22:54 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 12:22:54 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 12:22:54 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 12:22:54 Europe/Berlin] PHP   4. App\Controllers\LoginController->login(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 12:22:54 Europe/Berlin] PHP   5. App\Models\User->loginUser($email = *uninitialized*, $password = *uninitialized*) C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php:27
+[02-Jan-2019 12:36:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method App\Controllers\UserController::userPageAction() from context 'Framework\Router' in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(56): Framework\Router->applyActionFromController('/user/', NULL)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[02-Jan-2019 12:42:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method App\Controllers\UserController::userPageAction() from context 'Framework\Router' in C:\xampp\htdocs\proiect_php\src\Router.php:33
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(56): Framework\Router->applyActionFromController('/user/', NULL)
+#1 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#2 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Router.php on line 33
+[02-Jan-2019 12:47:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 12:47:11 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 12:47:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 12:47:11 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 12:47:11 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 12:47:11 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 12:47:45 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 12:47:45 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 12:47:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 12:47:45 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 12:47:45 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 12:47:45 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 12:52:34 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 12:52:34 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 12:52:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 12:52:34 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 12:52:34 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 12:52:34 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 12:54:02 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 12:54:02 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 12:54:02 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 12:54:02 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 12:54:02 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 12:54:02 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP Notice:  Undefined index: firstName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP Notice:  Undefined index: secondName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 36
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:56
+[02-Jan-2019 13:06:08 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:33
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP Notice:  Undefined index: firstName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP Notice:  Undefined index: secondName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 36
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:08:16 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Notice:  Undefined index: firstName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Notice:  Undefined index: secondName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 36
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:15 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Notice:  Undefined index: firstName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Notice:  Undefined index: secondName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 36
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:24 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:09:42 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:42 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:42 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:42 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:42 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:42 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:09:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:09:50 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:50 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:50 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:50 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:50 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Notice:  Undefined index: firstName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Notice:  Undefined index: secondName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 36
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:09:58 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:26:43 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:26:43 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:26:43 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:26:43 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:26:43 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:26:43 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:26:43 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:36:22 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:36:22 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:36:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:36:22 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:36:22 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:36:22 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:36:22 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:36:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:36:32 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:36:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:36:32 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:36:32 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:36:32 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:36:32 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 13:36:44 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 13:36:44 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 13:36:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 13:36:44 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 13:36:44 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 13:36:44 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 13:36:44 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 14:00:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 14:00:12 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:00:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:00:12 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:00:12 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:00:12 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:00:12 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:00:49 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Notice:  Undefined index: firstName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Notice:  Undefined index: secondName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 36
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:00:59 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:33
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Notice:  Undefined index: firstName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Notice:  Undefined index: secondName in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 36
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP Stack trace:
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[02-Jan-2019 14:01:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31

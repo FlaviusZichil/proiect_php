@@ -32,10 +32,45 @@ table {
     background-color: mintcream ;
 }
 
-.bottom-container {
-    margin-top: 3%;
+.header-coll {
+    /*border: 2px solid red;*/
 }
 
-.header-coll {
-    /*margin: 3%;*/
+
+.first-menu {
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-bottom: 8%;
+}
+
+.second-menu {
+    margin-left: 7%;
+    margin-top: 3%;
+    margin-bottom: 8%;
+}
+
+.top-cointainer {
+    background-color: #ECF1ED;
+}
+
+.middle-cointainer {
+    background-color: beige;
+}
+
+.bottom-container {
+    background-color: beige;
+}
+
+.middle-cointainer-personal-data {
+    background-color: beige;
+    margin: 5%;
+}
+
+.middle-cointainer-all-medals {
+    background-color: beige;
+    margin: 5%;
+}
+
+.all-medals-button{
+    margin-bottom: 5%;
 }

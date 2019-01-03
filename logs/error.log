@@ -873,3 +873,586 @@ Stack trace:
 [02-Jan-2019 14:01:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
 [02-Jan-2019 14:01:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
 [02-Jan-2019 14:01:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:17:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 45
+[03-Jan-2019 14:19:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:19:15 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:19:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:19:15 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:19:15 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:19:15 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:19:15 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:19:33 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:19:33 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:19:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:19:33 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:19:33 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:19:33 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:19:33 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:19:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:19:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:20:09 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:22:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:22:49 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:22:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:22:49 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:22:49 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:22:49 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:22:49 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:22:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:22:51 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:22:51 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:22:51 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:22:51 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:22:51 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:22:51 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:23:05 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:23:05 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:23:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:23:05 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:23:05 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:23:05 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:23:05 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:23:29 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:23:29 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:23:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:23:29 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:23:29 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:23:29 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:23:29 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:23:30 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:23:30 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:23:30 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:23:30 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:23:30 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:23:30 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:23:30 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:23:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:23:32 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:23:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:23:32 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:23:32 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:23:32 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:23:32 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:24:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:24:40 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:24:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:24:40 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:24:40 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:24:40 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:24:40 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:24:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:24:42 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:24:42 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:24:42 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:24:42 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:24:42 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:24:42 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:24:44 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:24:44 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:24:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:24:44 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:24:44 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:24:44 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:24:44 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:24:45 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:24:45 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:24:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:24:45 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:24:45 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:24:45 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:24:45 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:24:48 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:24:48 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:24:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:24:48 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:24:48 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:24:48 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:24:48 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:25:04 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:25:04 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:25:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:25:05 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:25:05 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:25:05 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:25:05 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:25:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:25:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:25:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 45
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:29:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:46
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:29:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 45
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:31:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 45
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:31:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 45
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:31:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 45
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:31:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 45
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:31:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:32:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:33:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:33:12 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:33:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:33:12 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:33:12 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:33:12 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:33:12 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:33:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:33:15 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:33:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:33:15 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:33:15 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:33:15 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:33:15 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:33:18 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:33:18 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:33:18 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:33:18 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:33:18 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:33:18 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:33:18 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:33:22 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:33:22 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:33:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:33:22 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:33:22 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:33:22 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:33:22 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:33:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[03-Jan-2019 14:33:24 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:33:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:33:24 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:33:24 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:33:24 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:33:24 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:40
+[03-Jan-2019 14:35:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:36:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:44
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 44
+[03-Jan-2019 14:40:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:46
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[03-Jan-2019 14:40:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:46
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[03-Jan-2019 14:43:25 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:43:26 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:43:26 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:43:26 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:43:26 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:43:26 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:43:26 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:43:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:43:27 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:43:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:43:27 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:43:27 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:43:27 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:43:27 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP Notice:  Undefined index: first_name    in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP Notice:  Undefined index: second_name    in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 47
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:45:30 Europe/Berlin] PHP   4. App\Controllers\UserController->userPersonalDataPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:47:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:47:00 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:47:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:47:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:47:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:47:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:47:00 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 14:55:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 14:55:27 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 14:55:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 14:55:27 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 14:55:27 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 14:55:27 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 14:55:27 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 15:40:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 15:40:09 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 15:40:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 15:40:09 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 15:40:09 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 15:40:09 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 15:40:09 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 15:43:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 15:43:50 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 15:43:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 15:43:50 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 15:43:50 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 15:43:50 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 15:43:50 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 15:50:20 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 15:50:20 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 15:50:20 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 15:50:20 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 15:50:20 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 15:50:20 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 15:50:20 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:06:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:06:59 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:06:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:06:59 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:06:59 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:06:59 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:06:59 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 28
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP   4. App\Controllers\UserController->logout(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP   5. App\Controllers\LoginController->logout() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:68
+[03-Jan-2019 16:07:02 Europe/Berlin] PHP   6. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php:28
+[03-Jan-2019 16:07:11 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:07:11 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:07:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:07:11 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:07:11 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:07:11 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:07:11 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:07:20 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:07:20 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:07:20 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:07:20 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:07:20 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:07:20 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:07:20 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:07:23 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:07:23 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:07:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:07:23 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:07:23 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:07:23 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:07:23 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:28:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:28:00 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:28:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:28:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:28:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:28:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:28:00 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 28
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP   4. App\Controllers\UserController->logout(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP   5. App\Controllers\LoginController->logout() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:70
+[03-Jan-2019 16:28:06 Europe/Berlin] PHP   6. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php:28
+[03-Jan-2019 16:28:36 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:28:36 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:28:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:28:36 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:28:36 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:28:36 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:28:36 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:29:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''first_name'=?, 'second_name'=?, 'password'=? WHERE 'email'=?' at line 1 in C:\xampp\htdocs\proiect_php\src\Model.php:128
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(128): PDO->prepare('UPDATE user SET...')
+#1 C:\xampp\htdocs\proiect_php\app\Models\User.php(42): Framework\Model->updateUser('Cosminis', 'Zichilis', 'newPassword')
+#2 C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php(64): App\Models\User->updateUserInDB('Cosminis', 'Zichilis', 'newPassword')
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userSavePersonalData(NULL)
+#4 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/save/', NULL)
+#5 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#6 {ma in C:\xampp\htdocs\proiect_php\src\Model.php on line 128
+[03-Jan-2019 16:40:36 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:40:36 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:40:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:40:36 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:40:36 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:40:36 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:40:36 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:42:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:42:31 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:42:31 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:42:31 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:42:31 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:42:31 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:42:31 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 28
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP   4. App\Controllers\UserController->logout(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP   5. App\Controllers\LoginController->logout() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:75
+[03-Jan-2019 16:46:04 Europe/Berlin] PHP   6. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php:28
+[03-Jan-2019 16:46:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:46:27 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:46:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:46:27 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:46:27 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:46:27 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:46:27 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:48:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:48:12 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:48:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:48:12 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:48:12 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:48:13 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:48:13 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:52:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:52:35 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:52:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:52:35 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:52:35 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:52:35 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:52:35 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 16:52:56 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 16:52:56 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 16:52:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 16:52:56 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 16:52:56 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 16:52:56 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 16:52:56 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 17:12:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 17:12:00 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 17:12:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 17:12:00 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 17:12:00 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 17:12:00 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 17:12:00 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 17:13:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 17:13:52 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 17:13:52 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 17:13:52 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 17:13:52 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 17:13:52 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 17:13:52 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 17:13:56 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 17:13:56 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 17:13:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 17:13:56 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 17:13:56 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 17:13:56 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 17:13:56 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 17:24:45 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 13
+[03-Jan-2019 17:24:45 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 17:24:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 17:24:45 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 17:24:45 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 17:24:45 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 17:24:45 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:13
+[03-Jan-2019 17:41:02 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[03-Jan-2019 17:41:02 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 17:41:02 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 17:41:02 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 17:41:02 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 17:41:02 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 17:41:02 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:14
+[03-Jan-2019 17:43:01 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[03-Jan-2019 17:43:01 Europe/Berlin] PHP Stack trace:
+[03-Jan-2019 17:43:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\proiect_php\public\index.php:0
+[03-Jan-2019 17:43:01 Europe/Berlin] PHP   2. Framework\Router->getResourceFromUri() C:\xampp\htdocs\proiect_php\public\index.php:24
+[03-Jan-2019 17:43:01 Europe/Berlin] PHP   3. Framework\Router->applyActionFromController($uri = *uninitialized*, $id = *uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:54
+[03-Jan-2019 17:43:01 Europe/Berlin] PHP   4. App\Controllers\UserController->userPageAction(*uninitialized*) C:\xampp\htdocs\proiect_php\src\Router.php:31
+[03-Jan-2019 17:43:01 Europe/Berlin] PHP   5. session_start() C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:14

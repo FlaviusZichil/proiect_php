@@ -38,7 +38,15 @@ class User extends Model{
         }
     }
 
+    function updateUserInDB(string $firstName, $secondName, $password){
+        $this->updateUser($firstName, $secondName, $password);
+    }
+
     public function getUserByEmail(string $email){
         return $this->getByEmail($email);
+    }
+
+    public function getAllDataAboutUserEmail(string $email){
+        return $this->getAllDataAboutUserByEmail($email);
     }
 }

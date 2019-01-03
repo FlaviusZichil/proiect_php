@@ -16,9 +16,14 @@
 
         '/user/' =>                  ['controller' => 'UserController', 'action' => 'userPageAction', 'guard' => "Authenticated"],
 
-        '/user/{id}' =>              ['controller' => 'UserController', 'action' => 'getUserByIdAction', 'guard' => "Authenticated"],
+        '/user/mytrips/' =>          ['controller' => 'UserController', 'action' => 'userMyTripsPageAction', 'guard' => "Authenticated"],
 
-        '/user/delete/{id}' =>       ['controller' => 'UserController', 'action' => 'deleteUserAction'],
+        '/user/save/' =>          ['controller' => 'UserController', 'action' => 'userSavePersonalData', 'guard' => "Authenticated"],
 
-        '/user/show' =>              ['controller' => 'UserController', 'action' => 'showUser'],
+        '/user/medals/' =>           ['controller' => 'UserController', 'action' => 'userMedalsPageAction', 'guard' => "Authenticated"],
+
+        '/user/personaldata/' =>     ['controller' => 'UserController', 'action' => 'userPersonalDataPageAction', 'guard' => "Authenticated"],
+
+        '/user/logout/' =>           ['controller' => 'UserController', 'action' => 'logout', 'guard' => "Authenticated"],
+
     ];

@@ -68,6 +68,14 @@ abstract class Model
         return $stmt->fetch();
     }
 
+    public function getAllDataAboutUserByEmail(string $email){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * FROM $this->table WHERE email=?");
+        $stmt->execute([$email]);
+
+        return $stmt->fetch();
+    }
+
     /**
      * this function will prepare data to be used in sql statement
      * 1. Will extract values from $data
@@ -112,8 +120,13 @@ abstract class Model
     /**
      *Update data in table
      */
-    public function update(array $data)
-    {
+    public function updateUser(string $firstName, $secondName, $password){
+        $db = $this->newDbCon();
+
+        $email = $_SESSION["email"];
+
+        $stmt = $db->prepare("UPDATE $this->table SET first_name=?, second_name=?, password=? WHERE email=?");
+        $stmt->execute([$firstName, $secondName, $password, $email]);
     }
 
     /**

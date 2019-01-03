@@ -12,13 +12,13 @@
     error_reporting(E_ALL);
     ini_set("display_errors", 0);
 
-    if(Config::ENV == "dev")
-    {
-        Tracy\Debugger::enable(Tracy\Debugger::DEVELOPMENT);
-        ini_set("display_errors", 1);
-    }
-
-    Tracy\Debugger::enable(Tracy\Debugger::PRODUCTION);
+//    if(Config::ENV == "dev")
+//    {
+//        Tracy\Debugger::enable(Tracy\Debugger::DEVELOPMENT);
+//        ini_set("display_errors", 1);
+//    }
+//
+//    Tracy\Debugger::enable(Tracy\Debugger::PRODUCTION);
 
     $router = new \Framework\Router($routes);
     $router->getResourceFromUri();

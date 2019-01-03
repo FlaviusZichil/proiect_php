@@ -46,7 +46,7 @@ class RegisterController extends Controller
         return $emailTakenValidator;
     }
 
-    private function isNameValid($username): bool{
+    public function isNameValid($username): bool{
         $usernameValidator = true;
 
         if(!isset($username) || strlen($username) < 2) {
@@ -64,7 +64,7 @@ class RegisterController extends Controller
         return $emailValidator;
     }
 
-    private function isPasswordValid($password): bool{
+    public function isPasswordValid($password): bool{
         $passwordValidator = true;
 
         if(!isset($password) || strlen($password) < 6) {

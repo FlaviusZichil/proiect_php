@@ -15,6 +15,7 @@ class RegisterController extends Controller
 
     // /register/auth/
     public function register():void {
+        // gets data from form
         $firstName = $_POST["registerFirstName"];
         $secondName = $_POST["registerSecondName"];
         $email = $_POST["registerEmail"];
@@ -22,12 +23,19 @@ class RegisterController extends Controller
 
         if($this->isValidFormData($firstName, $secondName, $email, $password) && !$this->isEmailTaken($email)){
             $user = new User();
+            // registers the user
             $user->registerUser($firstName, $secondName, $email, $password);
 
+            // gets current user id
+            $addedUserID = $user->getUserIdByEmail($email);
+            $addedUserAsArray = json_decode(json_encode($addedUserID), true);
+
+            // starts the session and adds user data to it
             session_start();
             $_SESSION["firstName"] = $firstName;
             $_SESSION["secondName"] = $secondName;
             $_SESSION["email"] = $email;
+            $_SESSION["user_id"] = $addedUserAsArray["user_id"];
 
             header("Location: /user/");
         }else{

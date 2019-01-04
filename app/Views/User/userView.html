@@ -60,7 +60,7 @@
                                 <p class="card-text">Altitudine: {{ trip.altitude }}</p>
                                 <p class="card-text">Locuri disponibiles: {{ trip.locuri_disponibile }}</p>
                             </div>
-                            <input class="btn btn-success" type="submit" name="submit" value="Inscrie-te!">
+                            <button class="btn btn-success" type="submit" name="submitButtonId" value="{{ trip.trip_id }}">Inscrie-te</button>
                         </div>
                         {% endfor %}
                     </div>
@@ -71,15 +71,7 @@
         <div class="bottom-container">
             <div class="row">
                 <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-                <div class="col-md-6 col-sm-2 col-xs-12 header-coll">
-                    <!--<table class="table">-->
-                        <!--<tr>-->
-                            <!--<td> FirstName: {{firstName}} </td>-->
-                            <!--<td> SecondName: {{secondName}} </td>-->
-                            <!--<td> Email: {{email}} </td>-->
-                        <!--</tr>-->
-                    <!--</table>-->
-                </div>
+                <div class="col-md-6 col-sm-2 col-xs-12 header-coll"></div>
                 <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
             </div>
         </div>

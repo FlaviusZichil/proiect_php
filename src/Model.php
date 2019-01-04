@@ -99,9 +99,6 @@ abstract class Model
         return [$columns, $values];
     }
 
-    /**
-     *Find data with values
-     */
     public Function find(array $data)
     {
         list($columns, $values) = $this->prepareDataForStmt($data);
@@ -110,29 +107,23 @@ abstract class Model
         return $stmt->execute([$values]);
     }
 
-    /**
-     *Insert new data in table
-     */
-    public function new(array $data)
-    {
-    }
-
-    /**
-     *Update data in table
-     */
     public function updateUser(string $firstName, $secondName, $password){
         $db = $this->newDbCon();
 
         $email = $_SESSION["email"];
 
-        $stmt = $db->prepare("UPDATE $this->table SET first_name=?, second_name=?, password=? WHERE email=?");
+        $stmt = $db->prepare("UPDATE user SET first_name=?, second_name=?, password=? WHERE email=?");
         $stmt->execute([$firstName, $secondName, $password, $email]);
     }
 
-    /**
-     *delete data from table
-     */
-    public function delete($id)
-    {
+    public function getAllMedalsForUser(string $email){
+//        $db = $this->newDbCon();
+//        $stmt = $db->prepare("SELECT location, altitude FROM medal
+//                                       INNER JOIN user_medals ON medal.medal_id = user_medal.medal_id
+//                                       Inner JOIN user ON user_medal.user_id = user.user_id
+//                                       WHERE email=?");
+//        $stmt->execute([$email]);
+//
+//        return $stmt->fetch();
     }
 }

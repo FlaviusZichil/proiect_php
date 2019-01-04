@@ -38,6 +38,44 @@ class User extends Model{
         }
     }
 
+    public function getDataFromUserTrips($user_id, $trip_id){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT user_id, trip_id FROM user_trips WHERE user_id=? AND trip_id=?");
+        $stmt->execute([$user_id, $trip_id]);
+
+        return $stmt->fetch();
+    }
+
+    public function getAllMedalsForUser(string $email){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT location, altitude FROM user
+                                       INNER JOIN user_medals ON user.user_id = user_medals.user_id
+                                       INNER JOIN medal ON user_medals.medal_id = medal.medal_id
+                                       WHERE user.email=?");
+        $stmt->execute([$email]);
+
+        return $stmt->fetch();
+    }
+
+    public function getAllTripsForUser(string $email){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT location, altitude, start_date, end_date FROM user
+                                       INNER JOIN user_trips ON user.user_id = user_trips.user_id
+                                       INNER JOIN trip ON user_trips.trip_id = trip.trip_id
+                                       WHERE user.email=?");
+        $stmt->execute([$email]);
+
+        return $stmt->fetch();
+    }
+
+    public function getUserIdByEmail($email){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT user_id FROM $this->table WHERE email=?");
+        $stmt->execute([$email]);
+
+        return $stmt->fetch();
+    }
+
     function updateUserInDB(string $firstName, $secondName, $password){
         $this->updateUser($firstName, $secondName, $password);
     }

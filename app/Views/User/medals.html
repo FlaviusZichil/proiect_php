@@ -63,6 +63,14 @@
                 </div>
 
                 <h3> Ai obtinut urmatoarele medalii: </h3>
+                <table class="table">
+                    {% for myMedal in userMedals %}
+                    <tr>
+                        {{myMedal}}
+                    </tr>
+                    {% endfor %}
+                </table>
+
             </div>
             <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
         </div>

@@ -24,20 +24,47 @@ class UserController extends Controller
     }
 
     public function userMyTripsPageAction(){
+        session_start();
+        $trip = new Trip();
+        $user = new User();
 
-        //lista cu toate tripurile pt user
+        if(!$this->isAlreadyRegisterdForThisTrip($_SESSION["user_id"], $_POST['submitButtonId']) && $_POST['submitButtonId'] != null){
+            $trip->addTripForUser($_SESSION["user_id"], $_POST['submitButtonId']);
+//            $trip->decreaseNumberOfParticipansForTrip(); trebuie implementat
+        }
+
+        $allTripsForUser = $user->getAllTripsForUser($_SESSION["email"]);
+        $userTripsAsArray = json_decode(json_encode($allTripsForUser), true);
+
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("User/myTrips.html");
+        echo $this->view("User/myTrips.html", ["userTrips" => $userTripsAsArray]);
     }
 
+    private function isAlreadyRegisterdForThisTrip($userId, $tripId):bool{
+        $user = new User();
+        $isAlreadyRegisterd = false;
+        $dataFromUserTrips = $user->getDataFromUserTrips($userId, $tripId);
+
+        if($dataFromUserTrips != null){
+            $isAlreadyRegisterd = true;
+        }
+        return $isAlreadyRegisterd;
+    }
+
+    // /user/medals/
     public function userMedalsPageAction(){
         $medal = new Medal();
+        $user = new User();
         $allMedals = $medal->medals;
-        
+
+        $userMedals = $user->getAllMedalsForUser($_SESSION["email"]);
+        $userMedalsAsArray = json_decode(json_encode($userMedals), true);
+
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("User/medals.html", ["allMedals" => $allMedals]);
+        echo $this->view("User/medals.html", ["allMedals" => $allMedals, "userMedals" => $userMedalsAsArray]);
     }
 
+    // /user/personaldata/
     public function userPersonalDataPageAction(){
         $user = new User();
         // gets data from db as stdClass
@@ -50,10 +77,6 @@ class UserController extends Controller
                                                             "second_name" => $userAsArray["second_name"],
                                                             "password" => $userAsArray["password"],
                                                             "email" => $userAsArray["email"]]);
-    }
-
-    public function userMyTrips(){
-
     }
 
     // /user/save/
@@ -75,6 +98,7 @@ class UserController extends Controller
         $this->userPersonalDataPageAction();
     }
 
+    // /user/logout/
     public function logout(){
        $loginController = new LoginController();
        $loginController->logout();

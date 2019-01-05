@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User</title>
+    <title>All trips</title>
     <link href="/Styles/adminHomeView.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -54,11 +54,61 @@
     </form>
 </div>
 <div class="middle-cointainer">
+    <form action="/admin/trips/" method="post">
         <div class="row">
-            <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-6 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
+            <div class="col-md-2 col-sm-2 col-xs-12 header-coll"></div>
+            <div class="col-md-8 col-sm-2 col-xs-12 header-coll">
+                <div class="btn-group">
+                <div class="dropdown btn-group action-button">
+                    <button class="btn btn-info dropdown-toggle btn-md" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sorteaza dupa
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="locationAscending">locatie - crescator</button>
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="locationDescending">locatie - descrescator</button>
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="startDateAscending">data inceput - crescator</button>
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="startDateDescending">data inceput - descrescator</button>
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a class="btn btn-success btn-block" href="/admin/trip/add/">Adauga ascensiune</a>
+                </div>
+                </div>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                    <tr align="center">
+                        <th scope="col">#</th>
+                        <th scope="col">Locatie</th>
+                        <th scope="col">Altitudine</th>
+                        <th scope="col">Data inceput</th>
+                        <th scope="col">Data sfarsit</th>
+                        <th scope="col">Locuri disponibile</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actiuni</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for trip in allTrips %}
+                    <tr>
+                        <th scope="row">{{trip.trip_id}}</th>
+                        <td align="center">{{trip.location}}</td>
+                        <td align="center">{{trip.altitude}}</td>
+                        <td align="center">{{trip.start_date}}</td>
+                        <td align="center">{{trip.end_date}}</td>
+                        <td align="center">{{trip.locuri_disponibile}}</td>
+                        <td align="center">{{trip.status}}</td>
+                        <td align="center">
+                            <button class="btn btn-danger" type="submit" name="deleteTripId" value="{{ trip.trip_id }}">Sterge ascensiune</button>
+                            <button class="btn btn-success" type="submit" name="setFinalizedTripId" value="{{ trip.trip_id }}">Seteaza ca finalizata</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 header-coll"></div>
         </div>
+    </form>
 </div>
 <div class="bottom-container">
     <div class="row">

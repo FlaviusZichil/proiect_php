@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User</title>
+    <title>All users</title>
     <link href="/Styles/adminHomeView.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -54,11 +54,47 @@
     </form>
 </div>
 <div class="middle-cointainer">
+    <form action="/admin/users/" method="post">
         <div class="row">
             <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-6 col-sm-2 col-xs-12 header-coll"></div>
+            <div class="col-md-6 col-sm-2 col-xs-12 header-coll">
+                <div class="dropdown btn-group first-menu">
+                    <button class="btn btn-info dropdown-toggle btn-md" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sorteaza dupa
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="numeCrescator">nume - crescator</button>
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="numeDescrescator">nume - descrescator</button>
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="prenumeCrescator">prenume - crescator</button>
+                        <button class="btn btn-secondary btn-block" type="submit" name="submit" value="prenumeDescrescator">prenume - descrescator</button>
+                    </div>
+                </div>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nume</th>
+                        <th scope="col">Prenume</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Actiune</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in allUsers %}
+                    <tr>
+                        <th scope="row">{{user.user_id}}</th>
+                        <td>{{user.second_name}}</td>
+                        <td>{{user.first_name}}</td>
+                        <td>{{user.email}}</td>
+                        <td><button class="btn btn-danger" type="submit" name="deleteUserId" value="{{ user.user_id }}">Sterge cont</button></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
             <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
         </div>
+    </form>
 </div>
 <div class="bottom-container">
     <div class="row">

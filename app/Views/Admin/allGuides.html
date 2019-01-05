@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User</title>
+    <title>All trips</title>
     <link href="/Styles/adminHomeView.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -54,11 +54,43 @@
     </form>
 </div>
 <div class="middle-cointainer">
+    <form action="/admin/guides/" method="post">
         <div class="row">
-            <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-6 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
+            <div class="col-md-2 col-sm-2 col-xs-12 header-coll"></div>
+            <div class="col-md-8 col-sm-2 col-xs-12 header-coll">
+                    <div class="action-button">
+                        <a class="btn btn-success" href="/admin/guide/add/">Adauga ghid</a>
+                    </div>
+                        <table class="table table-sm">
+                            <thead class="thead-dark">
+                            <tr align="center">
+                                <th scope="col">#</th>
+                                <th scope="col">Nume</th>
+                                <th scope="col">Prenume</th>
+                                <th scope="col">Ani experienta</th>
+                                <th scope="col">Oras</th>
+                                <th scope="col">Actiuni</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for guide in allGuides %}
+                            <tr>
+                                <th scope="row">{{guide.guide_id}}</th>
+                                <td align="center">{{guide.first_name}}</td>
+                                <td align="center">{{guide.second_name}}</td>
+                                <td align="center">{{guide.years_of_experience}}</td>
+                                <td align="center">{{guide.city}}</td>
+                                <td align="center">
+                                    <button class="btn btn-danger" type="submit" name="deleteGuideId" value="{{ guide.guide_id }}">Elimina ghid</button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 header-coll"></div>
         </div>
+    </form>
 </div>
 <div class="bottom-container">
     <div class="row">

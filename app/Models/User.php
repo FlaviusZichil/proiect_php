@@ -76,7 +76,28 @@ class User extends Model{
         return $stmt->fetch();
     }
 
-    function updateUserInDB(string $firstName, $secondName, $password){
+    public function deleteUserById($userId){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("DELETE FROM $this->table WHERE user_id=?");
+        $stmt->execute([$userId]);
+    }
+
+    public function getAllUsersOrderBY(string $way, $column){
+        $db = $this->newDbCon();
+
+        $stmt = $db->prepare("SELECT * FROM $this->table ORDER BY $column $way");
+        $stmt->execute();
+
+        $users = array();
+
+        while(($row =  $stmt->fetch())) {
+            array_push($users, $row);
+        }
+
+        return $users;
+    }
+
+    public function updateUserInDB(string $firstName, $secondName, $password){
         $this->updateUser($firstName, $secondName, $password);
     }
 
@@ -86,5 +107,9 @@ class User extends Model{
 
     public function getAllDataAboutUserEmail(string $email){
         return $this->getAllDataAboutUserByEmail($email);
+    }
+
+    public function getAllUsers(){
+        return $this->getAll();
     }
 }

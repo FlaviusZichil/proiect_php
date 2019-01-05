@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Config;
+use App\Models\Admin;
 use App\Models\User;
 use Framework\Controller;
 use PDO;
@@ -20,8 +21,14 @@ class LoginController extends Controller
         $email = $_POST["emailLogin"];
         $password = $_POST["passwordLogin"];
 
-        $user = new User();
-        $user->loginUser($email, $password);
+        if($email == "FlaviusZichil@admin.com" && $password == "houses22"){
+            $admin = new Admin();
+            $admin->loginAdmin();
+        }
+        else{
+            $user = new User();
+            $user->loginUser($email, $password);
+        }
     }
 
     public function logout(){

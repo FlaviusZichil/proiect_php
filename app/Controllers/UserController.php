@@ -23,14 +23,15 @@ class UserController extends Controller
         echo $this->view("User/userView.html", ["firstName" => $firstName, "secondName" => $secondName, "email" => $email, "allTrips" => $allTrips]);
     }
 
+    // /user/mytrips/
     public function userMyTripsPageAction(){
         session_start();
         $trip = new Trip();
         $user = new User();
 
-        if(!$this->isAlreadyRegisterdForThisTrip($_SESSION["user_id"], $_POST['submitButtonId']) && $_POST['submitButtonId'] != null){
+        if(!$this->isAlreadyRegisteredForThisTrip($_SESSION["user_id"], $_POST['submitButtonId']) && $_POST['submitButtonId'] != null){
             $trip->addTripForUser($_SESSION["user_id"], $_POST['submitButtonId']);
-//            $trip->decreaseNumberOfParticipansForTrip(); trebuie implementat
+            $trip->decreaseNumberOfParticipantsForTrip($_POST['submitButtonId']);
         }
 
         $allTripsForUser = $user->getAllTripsForUser($_SESSION["email"]);
@@ -40,7 +41,7 @@ class UserController extends Controller
         echo $this->view("User/myTrips.html", ["userTrips" => $userTripsAsArray]);
     }
 
-    private function isAlreadyRegisterdForThisTrip($userId, $tripId):bool{
+    private function isAlreadyRegisteredForThisTrip($userId, $tripId):bool{
         $user = new User();
         $isAlreadyRegisterd = false;
         $dataFromUserTrips = $user->getDataFromUserTrips($userId, $tripId);

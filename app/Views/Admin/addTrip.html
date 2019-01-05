@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User</title>
+    <title>Add trip</title>
     <link href="/Styles/adminHomeView.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -54,11 +54,36 @@
     </form>
 </div>
 <div class="middle-cointainer">
+    <form action="/admin/trip/add/" method="post">
         <div class="row">
             <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-6 col-sm-2 col-xs-12 header-coll"></div>
+            <div class="col-md-6 col-sm-2 col-xs-12 header-coll">
+                    <div class="form-group">
+                        <label for="location">Locatie</label>
+                        <input type="text" class="form-control" id="location" name="tripLocation" placeholder="Locatie" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="altitude">Altitudine</label>
+                        <input type="text" class="form-control" id="altitude" name="tripAltitude" placeholder="Altitudine" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Data inceput</label>
+                        <input type="text" class="form-control" id="startDate" name="tripStartDate" placeholder="Data inceput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">Data sfarsit</label>
+                        <input type="text" class="form-control" id="endDate" name="tripEndDate" placeholder="Data sfarsit" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="locuri">Numar de locuri disponibile</label>
+                        <input type="text" class="form-control" id="locuri" name="tripAvailableRegistrations" placeholder="Numar de locuri disponibile" required>
+                    </div>
+                         <input id="registerSubmit" type="submit" name="submitAddTrip" class="btn btn-success btn-block" value="Adauga ascensiune">
+                         <a href="/admin/trips/" class="btn btn-info btn-block">Toate ascensiunile </a>
+                     </div>
             <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
         </div>
+    </form>
 </div>
 <div class="bottom-container">
     <div class="row">

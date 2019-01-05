@@ -116,6 +116,12 @@ abstract class Model
         $stmt->execute([$firstName, $secondName, $password, $email]);
     }
 
+    public function deleteById($id, $column){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("DELETE FROM $this->table WHERE $column=?");
+        $stmt->execute([$id]);
+    }
+
     public function getAllMedalsForUser(string $email){
 //        $db = $this->newDbCon();
 //        $stmt = $db->prepare("SELECT location, altitude FROM medal

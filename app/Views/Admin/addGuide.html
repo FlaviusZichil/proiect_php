@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User</title>
+    <title>Add trip</title>
     <link href="/Styles/adminHomeView.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -54,11 +54,32 @@
     </form>
 </div>
 <div class="middle-cointainer">
+    <form action="/admin/guide/add/" method="post">
         <div class="row">
             <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-6 col-sm-2 col-xs-12 header-coll"></div>
+            <div class="col-md-6 col-sm-2 col-xs-12 header-coll">
+                <div class="form-group">
+                    <label for="firstName">Prenume</label>
+                    <input type="text" class="form-control" id="firstName" name="guideFirstName" placeholder="Prenume" required>
+                </div>
+                <div class="form-group">
+                    <label for="secondName">Nume</label>
+                    <input type="text" class="form-control" id="secondName" name="guideSecondName" placeholder="Nume" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">Oras</label>
+                    <input type="text" class="form-control" id="city" name="guideCity" placeholder="Oras" required>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Ani de experienta</label>
+                    <input type="text" class="form-control" id="experience" name="guideExperience" placeholder="experienta" required>
+                </div>
+                <input id="registerSubmit" type="submit" name="submitAddGuide" class="btn btn-success btn-block" value="Adauga ghid">
+                <a href="/admin/guides/" class="btn btn-info btn-block">Toti ghizii </a>
+            </div>
             <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
         </div>
+    </form>
 </div>
 <div class="bottom-container">
     <div class="row">

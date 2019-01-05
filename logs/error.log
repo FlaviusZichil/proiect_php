@@ -5367,3 +5367,130 @@ Stack trace:
 [05-Jan-2019 19:05:14 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 105
 [05-Jan-2019 19:05:14 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 106
 [05-Jan-2019 19:05:23 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:39:29 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:39:36 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:39:37 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:39:39 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:39:44 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:39:47 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:39:51 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:40:08 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:40:08 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:40:22 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:40:24 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:40:26 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 78
+[05-Jan-2019 19:40:26 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 79
+[05-Jan-2019 19:40:26 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 80
+[05-Jan-2019 19:40:26 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 81
+[05-Jan-2019 19:40:26 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 82
+[05-Jan-2019 19:40:57 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:40:57 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:41:01 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:41:05 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:41:10 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 103
+[05-Jan-2019 19:41:10 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 104
+[05-Jan-2019 19:41:10 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 105
+[05-Jan-2019 19:41:10 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 106
+[05-Jan-2019 19:41:24 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:41:33 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 35
+[05-Jan-2019 19:41:49 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:41:59 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:41:59 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:42:01 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:42:48 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:43:43 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:43:43 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:43:50 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:43:52 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:44:40 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:44:40 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:45:00 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:45:03 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:45:03 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:45:17 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 95
+[05-Jan-2019 19:47:30 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:47:30 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:49:07 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 78
+[05-Jan-2019 19:49:07 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 79
+[05-Jan-2019 19:49:07 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 80
+[05-Jan-2019 19:49:07 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 81
+[05-Jan-2019 19:49:07 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 82
+[05-Jan-2019 19:49:21 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:49:21 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:51:08 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:54:28 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:54:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' in C:\xampp\htdocs\proiect_php\src\Model.php:121
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(121): PDO->prepare('DELETE FROM tri...')
+#1 C:\xampp\htdocs\proiect_php\app\Models\Trip.php(40): Framework\Model->deleteById(NULL, 'user_id')
+#2 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(48): App\Models\Trip->deleteTripById(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#4 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#5 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#6 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 121
+[05-Jan-2019 19:54:31 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:54:33 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:54:33 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' in C:\xampp\htdocs\proiect_php\src\Model.php:121
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(121): PDO->prepare('DELETE FROM tri...')
+#1 C:\xampp\htdocs\proiect_php\app\Models\Trip.php(40): Framework\Model->deleteById(NULL, 'user_id')
+#2 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(48): App\Models\Trip->deleteTripById(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#4 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#5 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#6 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 121
+[05-Jan-2019 19:55:37 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:55:40 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:55:40 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:55:42 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 78
+[05-Jan-2019 19:55:42 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 79
+[05-Jan-2019 19:55:42 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 80
+[05-Jan-2019 19:55:42 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 81
+[05-Jan-2019 19:55:42 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 82
+[05-Jan-2019 19:55:57 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:55:57 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:56:01 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:56:02 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:56:24 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:56:24 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:56:25 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 18
+[05-Jan-2019 19:56:28 Europe/Berlin] PHP Notice:  Undefined index: deleteTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 48
+[05-Jan-2019 19:56:28 Europe/Berlin] PHP Notice:  Undefined index: setFinalizedTripId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 49
+[05-Jan-2019 19:57:08 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 35
+[05-Jan-2019 19:57:18 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 19:57:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 28
+[05-Jan-2019 19:57:30 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 19:57:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 28
+[05-Jan-2019 19:57:52 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 32
+[05-Jan-2019 19:57:52 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 32
+[05-Jan-2019 20:00:16 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 42
+[05-Jan-2019 20:00:16 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[05-Jan-2019 20:00:16 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[05-Jan-2019 20:00:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 20:00:28 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 42
+[05-Jan-2019 20:01:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 20:01:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 42
+[05-Jan-2019 20:01:38 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[05-Jan-2019 20:01:38 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 46
+[05-Jan-2019 20:01:39 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 20:01:57 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 20:02:01 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 28
+[05-Jan-2019 20:02:01 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 32
+[05-Jan-2019 20:02:01 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 32
+[05-Jan-2019 20:05:03 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 20:05:05 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 28
+[05-Jan-2019 20:05:05 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 32
+[05-Jan-2019 20:05:05 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 32
+[05-Jan-2019 20:05:43 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 20:08:45 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 14
+[05-Jan-2019 20:10:06 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'medal_id' in field list is ambiguous in C:\xampp\htdocs\proiect_php\app\Models\User.php:51
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\app\Models\User.php(51): PDO->prepare('SELECT medal_id...')
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php(60): App\Models\User->getAllMedalsForUser('flsvvafla@yahoo...')
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userMedalsPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/medals/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 51

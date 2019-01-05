@@ -33,12 +33,6 @@ class Trip extends Model
         return $stmt->fetch();
     }
 
-    public function deleteTripById($tripId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("DELETE FROM $this->table WHERE trip_id=?");
-        $stmt->execute([$tripId]);
-    }
-
     public function setTripFinalized($tripId){
         $db = $this->newDbCon();
         $newStatus = "Finished";
@@ -50,11 +44,6 @@ class Trip extends Model
         $db = $this->newDbCon();
         $stmt = $db->prepare("INSERT INTO $this->table(location, altitude, start_date, end_date, locuri_disponibile) VALUES(?, ?, ?, ?, ?)");
         $stmt->execute([$location, $altitude, $startDate, $endDate, $locuri]);
-    }
-
-    public function getAllTrips(){
-        $allTrips = $this->getAll();
-        return $allTrips;
     }
 
     public function getAllTripsOrderBY(string $way, $column){
@@ -70,5 +59,13 @@ class Trip extends Model
         }
 
         return $trips;
+    }
+
+    public function getAllTrips(){
+        return $allTrips = $this->getAll();
+    }
+
+    public function deleteTripById($tripId){
+        $this->deleteById($tripId, "trip_id");
     }
 }

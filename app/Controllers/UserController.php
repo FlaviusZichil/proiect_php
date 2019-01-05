@@ -35,10 +35,9 @@ class UserController extends Controller
         }
 
         $allTripsForUser = $user->getAllTripsForUser($_SESSION["email"]);
-        $userTripsAsArray = json_decode(json_encode($allTripsForUser), true);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("User/myTrips.html", ["userTrips" => $userTripsAsArray]);
+        echo $this->view("User/myTrips.html", ["userTrips" => $allTripsForUser]);
     }
 
     private function isAlreadyRegisteredForThisTrip($userId, $tripId):bool{
@@ -59,10 +58,9 @@ class UserController extends Controller
         $allMedals = $medal->medals;
 
         $userMedals = $user->getAllMedalsForUser($_SESSION["email"]);
-        $userMedalsAsArray = json_decode(json_encode($userMedals), true);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("User/medals.html", ["allMedals" => $allMedals, "userMedals" => $userMedalsAsArray]);
+        echo $this->view("User/medals.html", ["allMedals" => $allMedals, "userMedals" => $userMedals]);
     }
 
     // /user/personaldata/

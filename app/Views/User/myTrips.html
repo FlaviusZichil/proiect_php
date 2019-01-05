@@ -55,7 +55,10 @@
                 <table class="table">
                     {% for myTrip in userTrips %}
                     <tr>
-                        {{myTrip}}
+                        <td>{{myTrip.location}}</td>
+                        <td>{{myTrip.altitude}}</td>
+                        <td>{{myTrip.start_date}}</td>
+                        <td>{{myTrip.end_date}}</td>
                     </tr>
                     {% endfor %}
                 </table>

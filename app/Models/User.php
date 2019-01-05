@@ -48,13 +48,19 @@ class User extends Model{
 
     public function getAllMedalsForUser(string $email){
         $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT location, altitude FROM user
+        $stmt = $db->prepare("SELECT medal.medal_id, location, altitude FROM user
                                        INNER JOIN user_medals ON user.user_id = user_medals.user_id
                                        INNER JOIN medal ON user_medals.medal_id = medal.medal_id
                                        WHERE user.email=?");
         $stmt->execute([$email]);
 
-        return $stmt->fetch();
+        $medals = array();
+
+        while(($row =  $stmt->fetch())) {
+            array_push($medals, $row);
+        }
+
+        return $medals;
     }
 
     public function getAllTripsForUser(string $email){
@@ -65,7 +71,13 @@ class User extends Model{
                                        WHERE user.email=?");
         $stmt->execute([$email]);
 
-        return $stmt->fetch();
+        $trips = array();
+
+        while(($row =  $stmt->fetch())) {
+            array_push($trips, $row);
+        }
+
+        return $trips;
     }
 
     public function getUserIdByEmail($email){
@@ -74,12 +86,6 @@ class User extends Model{
         $stmt->execute([$email]);
 
         return $stmt->fetch();
-    }
-
-    public function deleteUserById($userId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("DELETE FROM $this->table WHERE user_id=?");
-        $stmt->execute([$userId]);
     }
 
     public function getAllUsersOrderBY(string $way, $column){
@@ -95,6 +101,10 @@ class User extends Model{
         }
 
         return $users;
+    }
+
+    public function deleteUserById($userId){
+        $this->deleteById($userId, "user_id");
     }
 
     public function updateUserInDB(string $firstName, $secondName, $password){

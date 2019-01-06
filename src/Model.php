@@ -68,6 +68,15 @@ abstract class Model
         return $stmt->fetch();
     }
 
+    public function getAllByEmail(string $email)
+    {
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * FROM $this->table WHERE email=?");
+        $stmt->execute([$email]);
+
+        return $stmt->fetch();
+    }
+
     public function getAllDataAboutUserByEmail(string $email){
         $db = $this->newDbCon();
         $stmt = $db->prepare("SELECT * FROM $this->table WHERE email=?");
@@ -120,16 +129,5 @@ abstract class Model
         $db = $this->newDbCon();
         $stmt = $db->prepare("DELETE FROM $this->table WHERE $column=?");
         $stmt->execute([$id]);
-    }
-
-    public function getAllMedalsForUser(string $email){
-//        $db = $this->newDbCon();
-//        $stmt = $db->prepare("SELECT location, altitude FROM medal
-//                                       INNER JOIN user_medals ON medal.medal_id = user_medal.medal_id
-//                                       Inner JOIN user ON user_medal.user_id = user.user_id
-//                                       WHERE email=?");
-//        $stmt->execute([$email]);
-//
-//        return $stmt->fetch();
     }
 }

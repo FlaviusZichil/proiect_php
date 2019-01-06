@@ -29,6 +29,11 @@ class UserController extends Controller
         $trip = new Trip();
         $user = new User();
 
+        if(isset($_POST["deleteMyTripId"])){
+            $user->deleteTripForUser($_POST["deleteMyTripId"]);
+            $trip->increaseNumberOfParticipantsForTrip($_POST["deleteMyTripId"]);
+        }
+
         if(!$this->isAlreadyRegisteredForThisTrip($_SESSION["user_id"], $_POST['submitButtonId']) && $_POST['submitButtonId'] != null){
             $trip->addTripForUser($_SESSION["user_id"], $_POST['submitButtonId']);
             $trip->decreaseNumberOfParticipantsForTrip($_POST['submitButtonId']);

@@ -27,7 +27,21 @@ class LoginController extends Controller
         }
         else{
             $user = new User();
-            $user->loginUser($email, $password);
+            if($user->loginUser($email, $password)){
+                session_start();
+                $currentUser = $user->getAllAboutUserByEmail($email);
+                $currentUserAsArray = json_decode(json_encode($currentUser), True);
+
+                $_SESSION["user_id"] = $currentUserAsArray["user_id"];
+                $_SESSION["firstName"] = $currentUserAsArray["first_name"];
+                $_SESSION["secondName"] = $currentUserAsArray["second_name"];
+                $_SESSION["email"] = $_POST["emailLogin"];
+                header("Location: /user/");
+            }
+            else{
+                header("Location: /login/");
+
+            }
         }
     }
 

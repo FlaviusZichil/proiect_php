@@ -47,26 +47,42 @@
     </form>
 </div>
 <div class="middle-cointainer">
-    <!--<form action="/user/medals/" method="post">-->
+    <form action="/user/mytrips/" method="post">
         <div class="row">
             <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
             <div class="col-md-6 col-sm-2 col-xs-12 header-coll middle-cointainer-all-medals">
                 <h3> Ai urmatoarele ascensiuni:  </h3>
-                <table class="table">
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                    <tr align="center">
+                        <th scope="col">#</th>
+                        <th scope="col">Locatie</th>
+                        <th scope="col">Altitudine</th>
+                        <th scope="col">Data inceput</th>
+                        <th scope="col">Data sfarsit</th>
+                        <th scope="col">Actiuni</th>
+                    </tr>
+                    </thead>
+                    <tbody>
                     {% for myTrip in userTrips %}
                     <tr>
-                        <td>{{myTrip.location}}</td>
-                        <td>{{myTrip.altitude}}</td>
-                        <td>{{myTrip.start_date}}</td>
-                        <td>{{myTrip.end_date}}</td>
+                        <th scope="row">{{myTrip.trip_id}}</th>
+                        <td align="center">{{myTrip.location}}</td>
+                        <td align="center">{{myTrip.altitude}}</td>
+                        <td align="center">{{myTrip.start_date}}</td>
+                        <td align="center">{{myTrip.end_date}}</td>
+                        <td align="center">
+                            <button class="btn btn-danger" type="submit" name="deleteMyTripId" value="{{ myTrip.trip_id }}">Elimina calatorie</button>
+                        </td>
                     </tr>
                     {% endfor %}
+                    </tbody>
                 </table>
 
             </div>
             <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
         </div>
-    <!--</form>-->
+    </form>
 </div>
 <div class="bottom-container">
     <div class="row">

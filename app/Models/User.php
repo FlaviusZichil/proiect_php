@@ -20,23 +20,20 @@ class User extends Model{
 
     function loginUser(string $email, $password){
         $pdo = $this->newDbCon();
-
-        $sql = "SELECT * FROM user WHERE 'email'=?";
+        $sql = "SELECT * FROM user WHERE email=?";
         $stmt = $pdo -> prepare($sql);
         $stmt -> execute([$email]);
 
-        if ($row = $stmt->fetch()) {
-            if($row && password_verify($password, $row['password'])) {
-                session_start();
-                $_SESSION["firstName"] = $row["firstName"];
-                $_SESSION["secondName"] = $row["secondName"];
-                $_SESSION["email"] = $row["email"];
-                header("location: /user/");
-            }
-        }else{
-            header("location: /login/");
+        $row =  $stmt->fetch();
+        $user = json_decode(json_encode($row), True);
+
+        if ($user != null && password_verify($password, $user["password"])){
+            return true;
         }
+
+        return false;
     }
+
 
     public function getDataFromUserTrips($user_id, $trip_id){
         $db = $this->newDbCon();
@@ -65,7 +62,7 @@ class User extends Model{
 
     public function getAllTripsForUser(string $email){
         $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT location, altitude, start_date, end_date FROM user
+        $stmt = $db->prepare("SELECT trip.trip_id, location, altitude, start_date, end_date FROM user
                                        INNER JOIN user_trips ON user.user_id = user_trips.user_id
                                        INNER JOIN trip ON user_trips.trip_id = trip.trip_id
                                        WHERE user.email=?");
@@ -103,6 +100,12 @@ class User extends Model{
         return $users;
     }
 
+    public function deleteTripForUser($tripId){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("DELETE FROM user_trips WHERE trip_id=?");
+        $stmt->execute([$tripId]);
+    }
+
     public function deleteUserById($userId){
         $this->deleteById($userId, "user_id");
     }
@@ -113,6 +116,9 @@ class User extends Model{
 
     public function getUserByEmail(string $email){
         return $this->getByEmail($email);
+
+    }public function getAllAboutUserByEmail(string $email){
+        return $this->getAllByEmail($email);
     }
 
     public function getAllDataAboutUserEmail(string $email){

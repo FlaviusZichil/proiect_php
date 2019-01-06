@@ -8,7 +8,7 @@ class Trip extends Model
 {
     protected $table = "trip";
 
-    public function addTripForUser(int $userId, string $tripId){
+    public function addTripForUser($userId, string $tripId){
         $db = $this->newDbCon();
         $stmt = $db->prepare("INSERT INTO user_trips(user_id, trip_id) VALUES(?, ?)");
         $stmt->execute([$userId, $tripId]);
@@ -23,6 +23,15 @@ class Trip extends Model
             $stmt = $db->prepare("UPDATE trip SET locuri_disponibile=? WHERE trip_id=?");
             $stmt->execute([$participants - 1, $tripId]);
         }
+    }
+
+    public function increaseNumberOfParticipantsForTrip($tripId){
+        $db = $this->newDbCon();
+        $numberOfParticipants = $this->getNumberOfParticipantsForTrip($tripId);
+        $participants = $numberOfParticipants->locuri_disponibile;
+
+        $stmt = $db->prepare("UPDATE trip SET locuri_disponibile=? WHERE trip_id=?");
+        $stmt->execute([$participants + 1, $tripId]);
     }
 
     private function getNumberOfParticipantsForTrip($tripId){

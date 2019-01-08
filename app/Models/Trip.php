@@ -44,7 +44,7 @@ class Trip extends Model
 
     public function setTripFinalized($tripId){
         $db = $this->newDbCon();
-        $newStatus = "Finished";
+        $newStatus = "Finalizata";
         $stmt = $db->prepare("UPDATE $this->table SET status=? WHERE trip_id=?");
         $stmt->execute([$newStatus, $tripId]);
     }
@@ -70,11 +70,23 @@ class Trip extends Model
         return $trips;
     }
 
+    public function getMedalIdByLocation($location){
+        return $this->getMedalByLocation($location);
+    }
+
+    public function getTripById($tripId){
+        return $this->getTripBy($tripId);
+    }
+
     public function getAllTrips(){
         return $allTrips = $this->getAll();
     }
 
     public function deleteTripById($tripId){
         $this->deleteById($tripId, "trip_id");
+    }
+
+    public function getAllUnfinishedTrips(){
+        return $this->getUnfinishedTrips();
     }
 }

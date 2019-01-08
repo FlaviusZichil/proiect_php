@@ -34,6 +34,19 @@ class User extends Model{
         return false;
     }
 
+    public function getUserIdsFromUserTrips($trip_id){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT user_id FROM user_trips WHERE trip_id=?");
+        $stmt->execute([$trip_id]);
+
+        $ids = array();
+
+        while(($row =  $stmt->fetch())) {
+            array_push($ids, $row);
+        }
+
+        return $ids;
+    }
 
     public function getDataFromUserTrips($user_id, $trip_id){
         $db = $this->newDbCon();

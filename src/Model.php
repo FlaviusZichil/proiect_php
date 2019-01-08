@@ -36,22 +36,14 @@ abstract class Model
         }
     }
 
-    /**
-     *Return all data from table
-     */
-    public function getAll(): array
-    {
+    public function getAll(): array{
         $db = $this->newDbCon();
         $stmt = $db->query("SELECT * FROM $this->table");
 
         return $stmt->fetchAll();
     }
 
-    /**
-     *Return data with specified id/index
-     */
-    public function getById($id)
-    {
+    public function getById($id){
         $db = $this->newDbCon();
         $stmt = $db->prepare("SELECT * FROM $this->table WHERE id=?");
         $stmt->execute([$id]);
@@ -59,11 +51,32 @@ abstract class Model
         return $stmt->fetch();
     }
 
-    public function getByEmail(string $email)
-    {
+    public function getMedalByLocation($location){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT medal_id FROM medal WHERE location=?");
+        $stmt->execute([$location]);
+
+        return $stmt->fetch();
+    }
+
+    public function addMedalForUser($userId, $medalId){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("INSERT INTO user_medals(user_id, medal_id) VALUES(?, ?)");
+        $stmt->execute([$userId, $medalId]);
+    }
+
+    public function getByEmail(string $email){
         $db = $this->newDbCon();
         $stmt = $db->prepare("SELECT email FROM $this->table WHERE email=?");
         $stmt->execute([$email]);
+
+        return $stmt->fetch();
+    }
+
+    public function checkUserForMedal($userId, $medalId){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * FROM user_medals WHERE user_id=? AND medal_id=?");
+        $stmt->execute([$userId, $medalId]);
 
         return $stmt->fetch();
     }
@@ -129,5 +142,22 @@ abstract class Model
         $db = $this->newDbCon();
         $stmt = $db->prepare("DELETE FROM $this->table WHERE $column=?");
         $stmt->execute([$id]);
+    }
+
+    public function getUnfinishedTrips(){
+        $db = $this->newDbCon();
+        $status = "Activa";
+        $stmt = $db->prepare("SELECT * FROM $this->table WHERE status=?");
+        $stmt->execute([$status]);
+
+        return $stmt->fetchAll();
+    }
+
+    public function getTripBy($tripId){
+        $db = $this->newDbCon();;
+        $stmt = $db->prepare("SELECT * FROM $this->table WHERE trip_id=?");
+        $stmt->execute([$tripId]);
+
+        return $stmt->fetchAll();
     }
 }

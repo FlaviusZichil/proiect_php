@@ -17,10 +17,10 @@ class UserController extends Controller
         $email = $_SESSION["email"];
 
         $trip = new Trip();
-        $allTrips = $trip->getAllTrips();
+        $allTrips = $trip->getAllUnfinishedTrips();
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("User/userView.html", ["firstName" => $firstName, "secondName" => $secondName, "email" => $email, "allTrips" => $allTrips]);
+        echo $this->view("User/userView.html", ["allTrips" => $allTrips]);
     }
 
     // /user/mytrips/

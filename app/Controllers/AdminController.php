@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\Guide;
+use App\Models\Medal;
 use App\Models\Trip;
 use App\Models\User;
 use Framework\Controller;
@@ -43,11 +44,39 @@ class AdminController extends Controller
         echo $this->view("Admin/allUsers.html", ["allUsers" => $allUsers]);
     }
 
+    // de refactorizat
     public function adminAllTripsPageAction(){
         $trip = new Trip();
-        $trip->deleteTripById($_POST["deleteTripId"]);
-        $trip->setTripFinalized($_POST["setFinalizedTripId"]);
+        $user = new User();
+        $medal = new Medal();
+
+        // if delete trip pressed
+        if(isset($_POST["deleteTripId"])){
+            $trip->deleteTripById($_POST["deleteTripId"]);
+        }
+
+        // gets all trips to show in view
         $allTrips = $trip->getAllTrips();
+
+        // if set finished pressed
+        if(isset($_POST["setFinalizedTripId"])){
+            $trip->setTripFinalized($_POST["setFinalizedTripId"]);
+            $allTrips = $trip->getAllTrips();
+            $userIdsAsStdObject = $user->getUserIdsFromUserTrips($_POST["setFinalizedTripId"]);
+            $userIdsAsArray = json_decode(json_encode($userIdsAsStdObject), true);
+
+            $selectedTripAsStdObject = $trip->getTripById($_POST["setFinalizedTripId"]);
+            $selectedTripAsArray = json_decode(json_encode($selectedTripAsStdObject), true);
+
+            $medalIdAsStdObject = $trip->getMedalIdByLocation($selectedTripAsArray[0]["location"]);
+            $medalIdAsArray = json_decode(json_encode($medalIdAsStdObject), true);
+
+            for($i = 0; $i < sizeof($userIdsAsArray); $i++){
+                if(!$medal->hasAlreadyThisMedal($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"])){
+                    $medal->addMedal($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"]);
+                }
+            }
+        }
 
         if(isset($_POST["submit"])){
             switch ($_POST["submit"]){

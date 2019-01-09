@@ -33,14 +33,9 @@ class Trip extends Model
         $stmt = $db->prepare("UPDATE trip SET locuri_disponibile=? WHERE trip_id=?");
         $stmt->execute([$participants + 1, $tripId]);
     }
-
-    // bad
+    // good
     private function getNumberOfParticipantsForTrip($tripId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT locuri_disponibile FROM trip WHERE trip_id=?");
-        $stmt->execute([$tripId]);
-
-        return $stmt->fetch();
+        return $this->getFieldBy("locuri_disponibile", "trip_id", $tripId);
     }
 
     public function setTripFinalized($tripId){
@@ -82,7 +77,6 @@ class Trip extends Model
     public function getAllTrips(){
         return $allTrips = $this->getAll();
     }
-
     // good
     public function deleteTripById($tripId){
         $this->deleteById($tripId, "trip_id");

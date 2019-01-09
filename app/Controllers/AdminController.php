@@ -88,12 +88,12 @@ class AdminController extends Controller
                     $allTrips = $trip->getAllTripsOrderBY("DESC", "location");
                     break;
                 }
-                case "startDateAscending":{
-                    $allTrips = $trip->getAllTripsOrderBY("ASC", "start_date");
+                case "statusAscending":{
+                    $allTrips = $trip->getAllTripsOrderBY("ASC", "status");
                     break;
                 }
-                case "startDateDescending":{
-                    $allTrips = $trip->getAllTripsOrderBY("DESC", "start_date");
+                case "statusDescending":{
+                    $allTrips = $trip->getAllTripsOrderBY("DESC", "status");
                     break;
                 }
             }

@@ -17,20 +17,14 @@ class User extends Model{
         $stmt = $pdo -> prepare($sql);
         $stmt -> execute([$first_name, $second_name, $email, $password]);
     }
-
+    // good
     function loginUser(string $email, $password){
-        $pdo = $this->newDbCon();
-        $sql = "SELECT * FROM user WHERE email=?";
-        $stmt = $pdo -> prepare($sql);
-        $stmt -> execute([$email]);
+        $user = $this->getAllByField("email", $email);
+        $userAsArray = json_decode(json_encode($user), True);
 
-        $row =  $stmt->fetch();
-        $user = json_decode(json_encode($row), True);
-
-        if ($user != null && password_verify($password, $user["password"])){
+        if ($user != null && password_verify($password, $userAsArray["password"])){
             return true;
         }
-
         return false;
     }
 
@@ -44,7 +38,6 @@ class User extends Model{
         while(($row =  $stmt->fetch())) {
             array_push($ids, $row);
         }
-
         return $ids;
     }
 
@@ -80,7 +73,6 @@ class User extends Model{
                                        INNER JOIN trip ON user_trips.trip_id = trip.trip_id
                                        WHERE user.email=?");
         $stmt->execute([$email]);
-
         $trips = array();
 
         while(($row =  $stmt->fetch())) {
@@ -89,13 +81,9 @@ class User extends Model{
 
         return $trips;
     }
-
+    // good
     public function getUserIdByEmail($email){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT user_id FROM $this->table WHERE email=?");
-        $stmt->execute([$email]);
-
-        return $stmt->fetch();
+        return $this->getFieldBy("user_id", "email", $email);
     }
 
     public function getAllUsersOrderBY(string $way, $column){
@@ -118,24 +106,23 @@ class User extends Model{
         $stmt = $db->prepare("DELETE FROM user_trips WHERE trip_id=?");
         $stmt->execute([$tripId]);
     }
-
+    // good
     public function deleteUserById($userId){
         $this->deleteById($userId, "user_id");
     }
-
+    // good
     public function updateUserInDB(string $firstName, $secondName, $password){
         $this->updateUser($firstName, $secondName, $password);
     }
-
+    // good
     public function getUserByEmail(string $email){
         return $this->getFieldBy("email", "email", $email);
-
     }
-
+    // good
     public function getAllAboutUserByEmail(string $email){
        return $this->getAllByField("email", $email);
     }
-
+    // good
     public function getAllUsers(){
         return $this->getAll();
     }

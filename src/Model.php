@@ -116,7 +116,6 @@ abstract class Model
         $stmt = $db->prepare("UPDATE user SET first_name=?, second_name=?, password=? WHERE email=?");
         $stmt->execute([$firstName, $secondName, $password, $email]);
     }
-
     // good
     public function deleteById($id, $column){
         $db = $this->newDbCon();

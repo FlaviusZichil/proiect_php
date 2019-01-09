@@ -128,14 +128,12 @@ class User extends Model{
     }
 
     public function getUserByEmail(string $email){
-        return $this->getByEmail($email);
+        return $this->getFieldBy("email", "email", $email);
 
-    }public function getAllAboutUserByEmail(string $email){
-        return $this->getAllByEmail($email);
     }
 
-    public function getAllDataAboutUserEmail(string $email){
-        return $this->getAllDataAboutUserByEmail($email);
+    public function getAllAboutUserByEmail(string $email){
+       return $this->getAllByField("email", $email);
     }
 
     public function getAllUsers(){

@@ -47,7 +47,7 @@ class RegisterController extends Controller
         $user = new User();
         $emailTakenValidator = false;
 
-        if($user->getByEmail($email) != null){
+        if($user->getUserByEmail($email) != null){
             $emailTakenValidator = true;
         }
 

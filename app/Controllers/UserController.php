@@ -17,7 +17,10 @@ class UserController extends Controller
         $email = $_SESSION["email"];
 
         $trip = new Trip();
-        $allTrips = $trip->getAllUnfinishedTrips();
+        $allTrips = $trip->getAllUnfinishedTrips("Activa");
+//        dump($allTrips);
+//        $allTripsAsArray = json_decode(json_encode($allTrips), true);
+//        dump($allTripsAsArray);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("User/userView.html", ["allTrips" => $allTrips]);
@@ -72,7 +75,7 @@ class UserController extends Controller
     public function userPersonalDataPageAction(){
         $user = new User();
         // gets data from db as stdClass
-        $userToDisplay = $user->getAllDataAboutUserByEmail($_SESSION["email"]);
+        $userToDisplay = $user->getAllAboutUserByEmail($_SESSION["email"]);
         // converts from stdClass to array
         $userAsArray = json_decode(json_encode($userToDisplay), true);
 

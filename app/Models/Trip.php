@@ -34,6 +34,7 @@ class Trip extends Model
         $stmt->execute([$participants + 1, $tripId]);
     }
 
+    // bad
     private function getNumberOfParticipantsForTrip($tripId){
         $db = $this->newDbCon();
         $stmt = $db->prepare("SELECT locuri_disponibile FROM trip WHERE trip_id=?");
@@ -55,6 +56,7 @@ class Trip extends Model
         $stmt->execute([$location, $altitude, $startDate, $endDate, $locuri]);
     }
 
+    // good
     public function getAllTripsOrderBY(string $way, $column){
         $db = $this->newDbCon();
 
@@ -70,23 +72,25 @@ class Trip extends Model
         return $trips;
     }
 
-    public function getMedalIdByLocation($location){
-        return $this->getMedalByLocation($location);
-    }
-
+    // bad
     public function getTripById($tripId){
         return $this->getTripBy($tripId);
+//        return $this->getById($tripId);
     }
 
+    // good
     public function getAllTrips(){
         return $allTrips = $this->getAll();
     }
 
+    // good
     public function deleteTripById($tripId){
         $this->deleteById($tripId, "trip_id");
     }
 
-    public function getAllUnfinishedTrips(){
-        return $this->getUnfinishedTrips();
+    // bad
+    public function getAllUnfinishedTrips($status){
+        return $this->getUnfinishedTrips($status);
+//        return $this->getAllByField("status", $status);
     }
 }

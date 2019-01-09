@@ -1,58 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>All trips</title>
-    <link href="/Styles/adminHomeView.css" type="text/css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
-<body>
-<div class="top-cointainer">
-    <form action="/user/logout/" method="post">
-        <div class="row">
-            <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-            <div class="col-md-6 col-sm-2 col-xs-12 header-coll">
-                <div class="dropdown btn-group first-menu">
-                    <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Utilizatori
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/admin/users/">Toti utilizatorii</a>
-                        <a class="dropdown-item" href="/admin/medals/">Adauga medalii</a>
-                    </div>
-                </div>
-                <div class="dropdown btn-group second-menu">
-                    <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Ascensiuni
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/admin/trips/">Gestionare ascensiuni</a>
-                    </div>
-                </div>
-                <div class="dropdown btn-group second-menu">
-                    <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Ghizi
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/admin/guides/">Gestionare ghizi</a>
-                    </div>
-                </div>
-                <div class="dropdown btn-group second-menu">
-                    <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contul meu
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <input type="submit" class="dropdown-item" value="Deconectare">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
-        </div>
-    </form>
-</div>
+{% set title="Toate calatoriile" %}
+{% extends "adminLayout.html" %}
+{% block head %}
+    {{parent()}}
+{% endblock %}
+{% block topContainer %}
+    {{parent()}}
+{% endblock %}
+{% block middleContainer %}
 <div class="middle-cointainer">
     <form action="/admin/trips/" method="post">
         <div class="row">
@@ -110,12 +64,6 @@
         </div>
     </form>
 </div>
-<div class="bottom-container">
-    <div class="row">
-        <div class="col-md-3 col-sm-2 col-xs-12 header-coll"></div>
-        <div class="col-md-6 col-sm-2 col-xs-12 header-coll"></div>
-        <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
-    </div>
-</div>
-</body>
-</html>
+{% endblock %}
+{% block bottomContainer %}
+{% endblock %}

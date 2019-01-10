@@ -5,6 +5,7 @@ use App\Models\Guide;
 use App\Models\Medal;
 use App\Models\Trip;
 use App\Models\User;
+use App\Models\UserTrips;
 use Framework\Controller;
 
 class AdminController extends Controller
@@ -49,6 +50,7 @@ class AdminController extends Controller
         $trip = new Trip();
         $user = new User();
         $medal = new Medal();
+        $userTrips = new UserTrips();
 
         // if delete trip pressed
         if(isset($_POST["deleteTripId"])){
@@ -60,9 +62,9 @@ class AdminController extends Controller
 
         // if set finished pressed
         if(isset($_POST["setFinalizedTripId"])){
-            $trip->setTripFinalized($_POST["setFinalizedTripId"]);
+            $trip->setTripFinalized($_POST["setFinalizedTripId"], "Finalizata");
             $allTrips = $trip->getAllTrips();
-            $userIdsAsStdObject = $user->getUserIdsFromUserTrips($_POST["setFinalizedTripId"]);
+            $userIdsAsStdObject = $userTrips->getUserIdsFromUserTrips($_POST["setFinalizedTripId"]);
             $userIdsAsArray = json_decode(json_encode($userIdsAsStdObject), true);
 
             $selectedTripAsStdObject = $trip->getTripById($_POST["setFinalizedTripId"]);

@@ -18,7 +18,7 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         {% for medal in allMedals %}
-                        <a class="dropdown-item" href="#">{{medal.name}} ({{medal.altitude}})</a>
+                        <a class="dropdown-item" href="#">{{medal.location}} {{medal.altitude}}</a>
                         {% endfor %}
                     </div>
                 </div>

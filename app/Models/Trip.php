@@ -7,42 +7,31 @@ use Framework\Model;
 class Trip extends Model
 {
     protected $table = "trip";
-
-    public function addTripForUser($userId, string $tripId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("INSERT INTO user_trips(user_id, trip_id) VALUES(?, ?)");
-        $stmt->execute([$userId, $tripId]);
-    }
-
+    // increase and decrease should be one method
     public function decreaseNumberOfParticipantsForTrip($tripId){
         $db = $this->newDbCon();
-        $numberOfParticipants = $this->getNumberOfParticipantsForTrip($tripId);
+        $numberOfParticipants = $this->getFieldBy("locuri_disponibile", "trip_id", $tripId);
         $participants = $numberOfParticipants->locuri_disponibile;
 
         if($participants != 1) {
-            $stmt = $db->prepare("UPDATE trip SET locuri_disponibile=? WHERE trip_id=?");
+            $stmt = $db->prepare("UPDATE $this->table SET locuri_disponibile=? WHERE trip_id=?");
             $stmt->execute([$participants - 1, $tripId]);
         }
     }
-
+    // increase and decrease should be one method
     public function increaseNumberOfParticipantsForTrip($tripId){
         $db = $this->newDbCon();
-        $numberOfParticipants = $this->getNumberOfParticipantsForTrip($tripId);
+        $numberOfParticipants = $this->getFieldBy("locuri_disponibile", "trip_id", $tripId);
         $participants = $numberOfParticipants->locuri_disponibile;
 
-        $stmt = $db->prepare("UPDATE trip SET locuri_disponibile=? WHERE trip_id=?");
+        $stmt = $db->prepare("UPDATE $this->table SET locuri_disponibile=? WHERE trip_id=?");
         $stmt->execute([$participants + 1, $tripId]);
     }
-    // good
-    private function getNumberOfParticipantsForTrip($tripId){
-        return $this->getFieldBy("locuri_disponibile", "trip_id", $tripId);
-    }
 
-    public function setTripFinalized($tripId){
+    public function setTripFinalized($tripId, $status){
         $db = $this->newDbCon();
-        $newStatus = "Finalizata";
         $stmt = $db->prepare("UPDATE $this->table SET status=? WHERE trip_id=?");
-        $stmt->execute([$newStatus, $tripId]);
+        $stmt->execute([$status, $tripId]);
     }
 
     public function addNewTrip($location, $altitude, $startDate, $endDate, $locuri){
@@ -51,13 +40,41 @@ class Trip extends Model
         $stmt->execute([$location, $altitude, $startDate, $endDate, $locuri]);
     }
 
-    // good
     public function getAllTripsOrderBY(string $way, $column){
         $db = $this->newDbCon();
-
         $stmt = $db->prepare("SELECT * FROM $this->table ORDER BY $column $way");
         $stmt->execute();
 
+        $trips = array();
+
+        while(($row =  $stmt->fetch())) {
+            array_push($trips, $row);
+        }
+        return $trips;
+    }
+
+    public function getTripById($tripId){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * FROM $this->table WHERE trip_id=?");
+        $stmt->execute([$tripId]);
+
+        return $stmt->fetchAll();
+    }
+
+    public function getAllUnfinishedTrips($status){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * FROM $this->table WHERE status=?");
+        $stmt->execute([$status]);
+        return $stmt->fetchAll();
+    }
+
+    public function getAllTripsForUser(string $email){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT trip.trip_id, location, altitude, start_date, end_date FROM user
+                                       INNER JOIN user_trips ON user.user_id = user_trips.user_id
+                                       INNER JOIN trip ON user_trips.trip_id = trip.trip_id
+                                       WHERE user.email=?");
+        $stmt->execute([$email]);
         $trips = array();
 
         while(($row =  $stmt->fetch())) {
@@ -67,24 +84,11 @@ class Trip extends Model
         return $trips;
     }
 
-    // bad
-    public function getTripById($tripId){
-        return $this->getTripBy($tripId);
-//        return $this->getById($tripId);
-    }
-
-    // good
     public function getAllTrips(){
         return $allTrips = $this->getAll();
     }
-    // good
+
     public function deleteTripById($tripId){
         $this->deleteById($tripId, "trip_id");
-    }
-
-    // bad
-    public function getAllUnfinishedTrips($status){
-        return $this->getUnfinishedTrips($status);
-//        return $this->getAllByField("status", $status);
     }
 }

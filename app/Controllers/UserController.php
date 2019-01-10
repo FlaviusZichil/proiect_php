@@ -5,22 +5,15 @@ namespace App\Controllers;
 use App\medal;
 use App\Models\Trip;
 use App\Models\User;
-use Couchbase\UserSettings;
+use App\Models\UserTrips;
 use Framework\Controller;
+use Framework\Model;
 
 class UserController extends Controller
 {
     public function userPageAction(){
-        session_start();
-        $firstName = $_SESSION["firstName"];
-        $secondName = $_SESSION["secondName"];
-        $email = $_SESSION["email"];
-
         $trip = new Trip();
         $allTrips = $trip->getAllUnfinishedTrips("Activa");
-//        dump($allTrips);
-//        $allTripsAsArray = json_decode(json_encode($allTrips), true);
-//        dump($allTripsAsArray);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("User/userView.html", ["allTrips" => $allTrips]);
@@ -30,42 +23,41 @@ class UserController extends Controller
     public function userMyTripsPageAction(){
         session_start();
         $trip = new Trip();
-        $user = new User();
+        $userTrips = new UserTrips();
 
         if(isset($_POST["deleteMyTripId"])){
-            $user->deleteTripForUser($_POST["deleteMyTripId"]);
+            $userTrips->deleteTripForUser($_POST["deleteMyTripId"]);
+
             $trip->increaseNumberOfParticipantsForTrip($_POST["deleteMyTripId"]);
         }
 
         if(!$this->isAlreadyRegisteredForThisTrip($_SESSION["user_id"], $_POST['submitButtonId']) && $_POST['submitButtonId'] != null){
-            $trip->addTripForUser($_SESSION["user_id"], $_POST['submitButtonId']);
+            $userTrips->addTripForUser($_SESSION["user_id"], $_POST['submitButtonId']);
             $trip->decreaseNumberOfParticipantsForTrip($_POST['submitButtonId']);
         }
 
-        $allTripsForUser = $user->getAllTripsForUser($_SESSION["email"]);
+        $allTripsForUser = $trip->getAllTripsForUser($_SESSION["email"]);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("User/myTrips.html", ["userTrips" => $allTripsForUser]);
     }
 
     private function isAlreadyRegisteredForThisTrip($userId, $tripId):bool{
-        $user = new User();
-        $isAlreadyRegisterd = false;
-        $dataFromUserTrips = $user->getDataFromUserTrips($userId, $tripId);
+        $userTrips = new UserTrips();
+        $isAlreadyRegistered = false;
+        $dataFromUserTrips = $userTrips->getDataFromUserTrips($userId, $tripId);
 
         if($dataFromUserTrips != null){
-            $isAlreadyRegisterd = true;
+            $isAlreadyRegistered = true;
         }
-        return $isAlreadyRegisterd;
+        return $isAlreadyRegistered;
     }
 
     // /user/medals/
     public function userMedalsPageAction(){
-        $medal = new Medal();
-        $user = new User();
-        $allMedals = $medal->medals;
-
-        $userMedals = $user->getAllMedalsForUser($_SESSION["email"]);
+        $medal = new \App\Models\Medal();
+        $allMedals = $medal->getAllFromMedal();
+        $userMedals = $medal->getAllMedalsForUser($_SESSION["email"]);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("User/medals.html", ["allMedals" => $allMedals, "userMedals" => $userMedals]);
@@ -97,7 +89,7 @@ class UserController extends Controller
 
         if($validator->isNameValid($firstName) && $validator->isNameValid($secondName) && $validator->isPasswordValid($password)){
             $pass = password_hash($password, PASSWORD_DEFAULT);
-            $user->updateUserInDB($firstName, $secondName, $pass);
+            $user->updateUser($firstName, $secondName, $pass);
         }else{
             header("Location: /user/personaldata/");
         }

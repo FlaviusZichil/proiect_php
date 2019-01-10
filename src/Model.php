@@ -22,7 +22,7 @@ abstract class Model
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
             PDO::ATTR_EMULATE_PREPARES   => false,
         ];
-        //by default the result from database will be an object but if specified it can be changed to an associative array / matrix
+
         if ($resultAsArray)
         {
             $options[PDO::ATTR_DEFAULT_FETCH_MODE] = PDO::FETCH_ASSOC;
@@ -39,7 +39,6 @@ abstract class Model
     public function getAll(): array{
         $db = $this->newDbCon();
         $stmt = $db->query("SELECT * FROM $this->table");
-
         return $stmt->fetchAll();
     }
     // good
@@ -47,7 +46,6 @@ abstract class Model
         $db = $this->newDbCon();
         $stmt = $db->prepare("SELECT * FROM $this->table WHERE id=?");
         $stmt->execute([$id]);
-
         return $stmt->fetch();
     }
     // good
@@ -65,20 +63,6 @@ abstract class Model
         $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $field . '=?';
         $stmt = $db->prepare($sql);
         $stmt->execute([$data]);
-
-        return $stmt->fetch();
-    }
-    // intermediate
-    public function addMedalForUser($userId, $medalId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("INSERT INTO user_medals(user_id, medal_id) VALUES(?, ?)");
-        $stmt->execute([$userId, $medalId]);
-    }
-    // intermediate
-    public function checkUserForMedal($userId, $medalId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM user_medals WHERE user_id=? AND medal_id=?");
-        $stmt->execute([$userId, $medalId]);
 
         return $stmt->fetch();
     }
@@ -107,35 +91,16 @@ abstract class Model
         $stmt = $db->prepare("SELECT * FROM $this->table WHERE $columns");
         return $stmt->execute([$values]);
     }
-
-    public function updateUser(string $firstName, $secondName, $password){
-        $db = $this->newDbCon();
-
-        $email = $_SESSION["email"];
-
-        $stmt = $db->prepare("UPDATE user SET first_name=?, second_name=?, password=? WHERE email=?");
-        $stmt->execute([$firstName, $secondName, $password, $email]);
-    }
     // good
     public function deleteById($id, $column){
         $db = $this->newDbCon();
         $stmt = $db->prepare("DELETE FROM $this->table WHERE $column=?");
         $stmt->execute([$id]);
     }
-    // bad
-    public function getUnfinishedTrips($status){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table WHERE status=?");
-        $stmt->execute([$status]);
 
-        return $stmt->fetchAll();
-    }
-    // bad
-    public function getTripBy($tripId){
+    public function modifyFieldById($field, $id){
         $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table WHERE trip_id=?");
-        $stmt->execute([$tripId]);
-
-        return $stmt->fetchAll();
+        $stmt = $db->prepare('UPDATE ' . $this->table . ' SET ' . $field .'=?' . ' WHERE ' . $id . '=?');
+        $stmt->execute([$field, $id]);
     }
 }

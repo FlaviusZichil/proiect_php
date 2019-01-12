@@ -18,132 +18,152 @@ class AdminController extends Controller
 
     public function adminAllUsersPageAction(){
         $user = new User();
-        $user->deleteById("user_id", $_POST["deleteUserId"]);
-        $allUsers = $user->getAll();
-
-        if(isset($_POST["submit"])){
-            switch ($_POST["submit"]){
-                case "numeCrescator": {
-                    $allUsers = $user->getAllOrderBY("ASC", "second_name");
-                    break;
-                }
-                case "numeDescrescator":{
-                    $allUsers = $user->getAllOrderBY("DESC", "second_name");
-                    break;
-                }
-                case "prenumeCrescator":{
-                    $allUsers = $user->getAllOrderBY("ASC", "first_name");
-                    break;
-                }
-                case "prenumeDescrescator":{
-                    $allUsers = $user->getAllOrderBY("DESC", "first_name");
-                    break;
-                }
-            }
+        // tests if any delete user button is pressed
+        if(isset($_POST["deleteUserId"])){
+            // removes the user from DB
+            $user->deleteById("user_id", $_POST["deleteUserId"]);
         }
-
+        // gets all users from DB
+        $allUsers = $user->getAll();
+        // tests if sort button is pressed
+        if(isset($_POST["userSortButton"])){
+            $allUsers = $this->sortUsers($_POST["userSortButton"]);
+        }
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("Admin/allUsers.html", ["allUsers" => $allUsers]);
     }
 
-    // de refactorizat
     public function adminAllTripsPageAction(){
         $trip = new Trip();
-        $user = new User();
-        $medal = new Medal();
-        $userTrips = new UserTrips();
-        $userMedals = new UserMedals();
-
-        // if delete trip pressed
+        // tests if delete trip button pressed
         if(isset($_POST["deleteTripId"])){
+            // delete selected trip
             $trip->deleteById("trip_id", $_POST["deleteTripId"]);
         }
-
+        // tests if set finished button pressed
+        if(isset($_POST["setFinalizedTripId"])){
+            // sets trip status to finished
+            $trip->setTripFinalized($_POST["setFinalizedTripId"], "Finalizata");
+            // adds medals to all users that participated to the trip that was set to finished
+            $this->addMedalForUser($_POST["setFinalizedTripId"]);
+        }
         // gets all trips to show in view
         $allTrips = $trip->getAll();
-
-        // if set finished pressed
-        if(isset($_POST["setFinalizedTripId"])){
-            $trip->setTripFinalized($_POST["setFinalizedTripId"], "Finalizata");
-            $allTrips = $trip->getAll();
-            $userIdsAsStdObject = $userTrips->getUserIdsFromUserTrips($_POST["setFinalizedTripId"]);
-            $userIdsAsArray = json_decode(json_encode($userIdsAsStdObject), true);
-
-            $selectedTripAsStdObject = $trip->getAllByField("trip_id", $_POST["setFinalizedTripId"]);
-            $selectedTripAsArray = json_decode(json_encode($selectedTripAsStdObject), true);
-
-            $medalIdAsStdObject = $medal->getFieldBy("medal_id", "location", $selectedTripAsArray[0]["location"]);
-            $medalIdAsArray = json_decode(json_encode($medalIdAsStdObject), true);
-
-            for($i = 0; $i < sizeof($userIdsAsArray); $i++){
-                if(!$medal->hasAlreadyThisMedal($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"])){
-//                    $medal->addMedal($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"]);
-                    $userMedals->addMedalForUser($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"]);
-                }
-            }
+        // tests is sort button is pressed
+        if(isset($_POST["tripSortButton"])){
+            $allTrips = $this->sortTrips($_POST["tripSortButton"]);
         }
-
-        if(isset($_POST["submit"])){
-            switch ($_POST["submit"]){
-                case "locationAscending": {
-                    $allTrips = $trip->getAllOrderBY("ASC", "location");
-                    break;
-                }
-                case "locationDescending":{
-                    $allTrips = $trip->getAllOrderBY("DESC", "location");
-                    break;
-                }
-                case "statusAscending":{
-                    $allTrips = $trip->getAllOrderBY("ASC", "status");
-                    break;
-                }
-                case "statusDescending":{
-                    $allTrips = $trip->getAllOrderBY("DESC", "status");
-                    break;
-                }
-            }
-        }
-
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("Admin/allTrips.html", ["allTrips" => $allTrips]);
     }
 
+    private function addMedalForUser($tripId){
+        $medal = new Medal();
+        $trip = new Trip();
+        $userTrips = new UserTrips();
+        $userMedals = new UserMedals();
+        // get all user's ids that participated to selected trip
+        $allUserIdsForThisTrip = $userTrips->getUserIdsFromUserTrips($tripId);
+        // gets all about selected trip
+        $selectedTrip = $trip->getRowByField("trip_id", $tripId);
+        // gets medal id for medal that has the same location as selected trip
+        $medalId = $medal->getFieldBy("medal_id", "location", $selectedTrip->location);
+
+        foreach ($allUserIdsForThisTrip as $userId){
+            // tests if the user already have that medal
+            if($medalId != null) {
+                if(!$medal->hasAlreadyThisMedal($userId->user_id, $medalId->medal_id)){
+                    // adds the medal to the user
+                    $userMedals->addMedalForUser($userId->user_id, $medalId->medal_id);
+                }
+            }
+        }
+    }
+
+    private function sortTrips($sortButton){
+        $trip = new Trip();
+        switch ($sortButton){
+            case "locationAscending": {
+                return $allTrips = $trip->getAllOrderBY("ASC", "location");
+            }
+            case "locationDescending":{
+                return $allTrips = $trip->getAllOrderBY("DESC", "location");
+            }
+            case "statusAscending":{
+                return $allTrips = $trip->getAllOrderBY("ASC", "status");
+            }
+            case "statusDescending":{
+                return $allTrips = $trip->getAllOrderBY("DESC", "status");
+            }
+            default:{
+                return "thereIsNoSuchButton";
+            }
+        }
+    }
+
+    private function sortUsers($sortButton){
+        $user = new User();
+        switch ($sortButton){
+            case "numeCrescator": {
+                return $allUsers = $user->getAllOrderBY("ASC", "second_name");
+            }
+            case "numeDescrescator":{
+                return $allUsers = $user->getAllOrderBY("DESC", "second_name");
+            }
+            case "prenumeCrescator":{
+                return $allUsers = $user->getAllOrderBY("ASC", "first_name");
+            }
+            case "prenumeDescrescator":{
+                return $allUsers = $user->getAllOrderBY("DESC", "first_name");
+            }
+            default:{
+                return "thereIsNoSuchButton";
+            }
+        }
+    }
+
     public function adminAddTrip(){
+        // gets data about new trip from form
         $newLocation = $_POST["tripLocation"];
         $newAltitude = $_POST["tripAltitude"];
         $newStartDate = $_POST["tripStartDate"];
         $newEndDate = $_POST["tripEndDate"];
         $newAvailableRegistrations = $_POST["tripAvailableRegistrations"];
-
+        // tests if data is valid
         if($newLocation != null && $newAltitude != null && $newStartDate != null && $newEndDate != null && $newAvailableRegistrations != null){
             $trip = new Trip();
+            // adds new trip to DB
             $trip->addNewTrip($newLocation, $newAltitude, $newStartDate, $newEndDate, $newAvailableRegistrations);
         }
-
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("Admin/addTrip.html");
     }
 
     public function adminAllGuides(){
         $guide = new Guide();
-        $guide->deleteById("guide_id", $_POST["deleteGuideId"]);
+        // tests if any delete guide button is pressed
+        if(isset($_POST["deleteGuideId"])){
+            // deletes the guide from DB
+            $guide->deleteById("guide_id", $_POST["deleteGuideId"]);
+        }
+        // gets all guide from DB
         $allGuides = $guide->getAll();
-
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("Admin/allGuides.html", ["allGuides" => $allGuides]);
     }
 
     public function adminAddGuides(){
+        // gets new guide data from form
         $newGuideFirstName = $_POST["guideFirstName"];
         $newGuideSecondName = $_POST["guideSecondName"];
         $newGuideCity = $_POST["guideCity"];
         $newGuideExperience = $_POST["guideExperience"];
-
+        // tests is data is valid
         if($newGuideFirstName != null && $newGuideSecondName != null && $newGuideCity != null && $newGuideExperience != null){
             $guide = new Guide();
+            // adds new guide to DB
             $guide->addNewGuide($newGuideFirstName, $newGuideSecondName, $newGuideExperience, $newGuideCity);
         }
-
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("Admin/addGuide.html");
     }

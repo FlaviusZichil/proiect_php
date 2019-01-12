@@ -7409,3 +7409,104 @@ Stack trace:
 [12-Jan-2019 16:19:54 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 140
 [12-Jan-2019 16:20:01 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
 [12-Jan-2019 16:20:05 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 16:33:44 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:33:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:33:57 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:33:57 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 16:33:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:33:59 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 16:34:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:34:01 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 16:36:06 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:36:06 Europe/Berlin] PHP Notice:  Undefined index: registerForTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 16:36:06 Europe/Berlin] PHP Notice:  Undefined index: registerForTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 16:36:06 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to App\Models\UserTrips::addTripForUser() must be of the type string, null given, called in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34 and defined in C:\xampp\htdocs\proiect_php\app\Models\UserTrips.php:25
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php(34): App\Models\UserTrips->addTripForUser(104, NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userMyTripsPageAction(NULL)
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/mytrips/', NULL)
+#3 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#4 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Models\UserTrips.php on line 25
+[12-Jan-2019 16:36:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:36:47 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:37:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:37:19 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:37:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:37:28 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:37:29 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 16:56:05 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 16:56:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 16:56:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 16:56:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 16:56:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 16:56:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 16:57:25 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 16:57:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 16:57:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 16:57:58 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 16:58:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 16:58:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 16:58:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 17:15:12 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 114
+[12-Jan-2019 17:15:12 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 115
+[12-Jan-2019 17:15:12 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 116
+[12-Jan-2019 17:15:12 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 117
+[12-Jan-2019 17:15:12 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 118
+[12-Jan-2019 17:15:31 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 144
+[12-Jan-2019 17:15:31 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 145
+[12-Jan-2019 17:15:31 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 146
+[12-Jan-2019 17:15:31 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 147
+[12-Jan-2019 17:52:45 Europe/Berlin] PHP Notice:  Undefined variable: userIdsAsArray in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 128
+[12-Jan-2019 17:52:45 Europe/Berlin] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 128
+[12-Jan-2019 18:06:26 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:07:08 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:07:16 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:07:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:07:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:07:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:08:19 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:08:30 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:08:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:08:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:09:11 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:22:41 Europe/Berlin] PHP Notice:  Undefined index: tripStartButton in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 139
+[12-Jan-2019 18:22:44 Europe/Berlin] PHP Notice:  Undefined index: tripStartButton in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 139
+[12-Jan-2019 18:32:56 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:34:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:34:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:35:02 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:35:29 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:37:14 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:37:26 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:37:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:37:36 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:37:41 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:38:19 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:38:37 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[12-Jan-2019 18:38:37 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 189
+[12-Jan-2019 18:38:37 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 190
+[12-Jan-2019 18:38:37 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 191
+[12-Jan-2019 18:38:37 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 192
+[12-Jan-2019 18:39:18 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:39:36 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:39:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:40:07 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:47:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:55:17 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:55:55 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 18:58:21 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 18:59:10 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 127
+[12-Jan-2019 18:59:10 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 128
+[12-Jan-2019 18:59:10 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[12-Jan-2019 18:59:10 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[12-Jan-2019 18:59:10 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[12-Jan-2019 18:59:31 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 157
+[12-Jan-2019 18:59:31 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 158
+[12-Jan-2019 18:59:31 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 159
+[12-Jan-2019 18:59:31 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 160
+[12-Jan-2019 18:59:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 19:00:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 19:00:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 19:00:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 19:01:07 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49

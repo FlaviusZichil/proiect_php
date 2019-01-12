@@ -35,6 +35,7 @@ class LoginController extends Controller
                 $_SESSION["firstName"] = $currentUser->first_name;
                 $_SESSION["secondName"] = $currentUser->second_name;
                 $_SESSION["email"] = $_POST["emailLogin"];
+
                 header("Location: /user/");
             }
             else{

@@ -69,7 +69,7 @@ class AdminController extends Controller
             $userIdsAsStdObject = $userTrips->getUserIdsFromUserTrips($_POST["setFinalizedTripId"]);
             $userIdsAsArray = json_decode(json_encode($userIdsAsStdObject), true);
 
-            $selectedTripAsStdObject = $trip->getById("trip_id", $_POST["setFinalizedTripId"]);
+            $selectedTripAsStdObject = $trip->getAllByField("trip_id", $_POST["setFinalizedTripId"]);
             $selectedTripAsArray = json_decode(json_encode($selectedTripAsStdObject), true);
 
             $medalIdAsStdObject = $medal->getFieldBy("medal_id", "location", $selectedTripAsArray[0]["location"]);

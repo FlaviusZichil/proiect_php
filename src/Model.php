@@ -9,8 +9,7 @@ abstract class Model
 {
     protected $table;
 
-    public Function newDbCon($resultAsArray = false)
-    {
+    public Function newDbCon($resultAsArray = false){
         $dsn = Config::DB['driver'];
         $dsn .= ":host=".Config::DB['host'];
         $dsn .= ";dbname=".Config::DB['dbname'];
@@ -39,13 +38,6 @@ abstract class Model
     public function getAll(): array{
         $db = $this->newDbCon();
         $stmt = $db->query("SELECT * FROM $this->table");
-        return $stmt->fetchAll();
-    }
-
-    public function getById($id, $value){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table WHERE $id=?");
-        $stmt->execute([$value]);
         return $stmt->fetchAll();
     }
 

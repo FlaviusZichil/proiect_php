@@ -25,17 +25,14 @@ class RegisterController extends Controller
             $user = new User();
             // registers the user
             $user->registerUser($firstName, $secondName, $email, $password);
-
             // gets current user id
             $addedUserID = $user->getFieldBy("user_id", "email", $email);
-            $addedUserAsArray = json_decode(json_encode($addedUserID), true);
-
             // starts the session and adds user data to it
             session_start();
             $_SESSION["firstName"] = $firstName;
             $_SESSION["secondName"] = $secondName;
             $_SESSION["email"] = $email;
-            $_SESSION["user_id"] = $addedUserAsArray["user_id"];
+            $_SESSION["user_id"] = $addedUserID->user_id;
 
             header("Location: /user/");
         }else{
@@ -50,7 +47,6 @@ class RegisterController extends Controller
         if($user->getFieldBy("email", "email", $email) != null){
             $emailTakenValidator = true;
         }
-
         return $emailTakenValidator;
     }
 

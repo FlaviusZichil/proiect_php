@@ -6894,3 +6894,468 @@ Stack trace:
 [10-Jan-2019 18:10:12 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 137
 [10-Jan-2019 18:10:23 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 126
 [10-Jan-2019 18:10:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:35:10 Europe/Berlin] PHP Recoverable fatal error:  Object of class App\Controllers\AdminController could not be converted to string in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[11-Jan-2019 12:35:17 Europe/Berlin] PHP Recoverable fatal error:  Object of class App\Controllers\AdminController could not be converted to string in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[11-Jan-2019 12:35:48 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[11-Jan-2019 12:37:02 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:40:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:40:53 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:41:06 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:41:09 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:41:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:42:25 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:45:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:45:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:45:26 Europe/Berlin] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 73
+[11-Jan-2019 12:45:26 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'medal_id' cannot be null in C:\xampp\htdocs\proiect_php\app\Models\UserMedals.php:21
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\app\Models\UserMedals.php(21): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\proiect_php\app\Models\Medal.php(13): App\Models\UserMedals->addMedalForUser(88, NULL)
+#2 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(78): App\Models\Medal->addMedal(88, NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#4 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#5 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#6 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Models\UserMedals.php on line 21
+[11-Jan-2019 12:48:07 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:48:21 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:48:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:48:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:48:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:49:07 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:49:23 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 109
+[11-Jan-2019 12:49:23 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 110
+[11-Jan-2019 12:49:23 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 111
+[11-Jan-2019 12:49:23 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 112
+[11-Jan-2019 12:49:23 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 113
+[11-Jan-2019 12:50:27 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 109
+[11-Jan-2019 12:50:27 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 110
+[11-Jan-2019 12:50:27 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 111
+[11-Jan-2019 12:50:27 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 112
+[11-Jan-2019 12:50:27 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 113
+[11-Jan-2019 12:50:46 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 109
+[11-Jan-2019 12:50:46 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 110
+[11-Jan-2019 12:50:46 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 111
+[11-Jan-2019 12:50:46 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 112
+[11-Jan-2019 12:50:46 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 113
+[11-Jan-2019 12:52:41 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:52:44 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:52:46 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:52:48 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:52:50 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:52:57 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[11-Jan-2019 12:53:01 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 126
+[11-Jan-2019 12:53:02 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 134
+[11-Jan-2019 12:53:02 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 135
+[11-Jan-2019 12:53:02 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 136
+[11-Jan-2019 12:53:02 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 137
+[11-Jan-2019 12:53:07 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 126
+[11-Jan-2019 12:53:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:53:18 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:53:21 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:53:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:53:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:53:23 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:53:23 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:53:23 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:53:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:54:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:54:47 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:54:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause' in C:\xampp\htdocs\proiect_php\src\Model.php:47
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(47): PDO->prepare('SELECT * FROM t...')
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(70): Framework\Model->getById('18')
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 47
+[11-Jan-2019 12:56:30 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:56:37 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:56:37 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:56:37 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:56:53 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:57:08 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:57:18 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:57:28 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:57:36 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:57:36 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:57:36 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 12:57:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:59:25 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 12:59:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 12:59:44 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:00:10 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:00:10 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:00:10 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:00:30 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:00:48 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:00:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:01:07 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:01:16 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:01:16 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:01:16 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:01:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:01:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:01:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:01:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:01:50 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:01:50 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:02:21 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:02:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:02:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:04:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:04:00 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:04:00 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[11-Jan-2019 13:04:22 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:04:26 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:04:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:07:20 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:07:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:07:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:08:04 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:08:18 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[11-Jan-2019 13:08:22 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:08:33 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:11:23 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:11:23 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:23 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:11:24 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:24 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:25 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:11:25 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:25 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:11:30 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:11:30 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:30 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:11:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:11:41 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:14:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:14:44 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:14:48 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:14:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:15:05 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 22
+[11-Jan-2019 13:15:11 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 22
+[11-Jan-2019 13:15:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:15:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:16:37 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[11-Jan-2019 13:16:46 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 22
+[11-Jan-2019 13:17:14 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 22
+[11-Jan-2019 13:18:28 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 22
+[11-Jan-2019 13:18:54 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 77
+[11-Jan-2019 13:18:54 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 78
+[11-Jan-2019 13:18:54 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 79
+[11-Jan-2019 13:18:54 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 80
+[11-Jan-2019 13:24:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 50
+[11-Jan-2019 13:24:13 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 77
+[11-Jan-2019 13:24:13 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 78
+[11-Jan-2019 13:24:13 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 79
+[11-Jan-2019 13:24:13 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 80
+[11-Jan-2019 13:25:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[11-Jan-2019 13:25:27 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:25:27 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[11-Jan-2019 13:27:13 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 77
+[11-Jan-2019 13:27:13 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 78
+[11-Jan-2019 13:27:13 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 79
+[11-Jan-2019 13:27:13 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 80
+[11-Jan-2019 13:27:17 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 77
+[11-Jan-2019 13:27:17 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 78
+[11-Jan-2019 13:27:17 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 79
+[11-Jan-2019 13:27:17 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 80
+[11-Jan-2019 13:27:41 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 78
+[11-Jan-2019 13:27:41 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 79
+[11-Jan-2019 13:27:41 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 80
+[11-Jan-2019 13:27:41 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 81
+[11-Jan-2019 13:28:08 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 73
+[11-Jan-2019 13:28:08 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 74
+[11-Jan-2019 13:28:08 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 81
+[11-Jan-2019 13:28:08 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 82
+[11-Jan-2019 13:28:08 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 83
+[11-Jan-2019 13:28:08 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 84
+[11-Jan-2019 13:28:41 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 81
+[11-Jan-2019 13:28:41 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 82
+[11-Jan-2019 13:28:41 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 83
+[11-Jan-2019 13:28:41 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 84
+[11-Jan-2019 13:29:05 Europe/Berlin] PHP Notice:  Undefined index: first_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 77
+[11-Jan-2019 13:29:05 Europe/Berlin] PHP Notice:  Undefined index: second_name in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 78
+[11-Jan-2019 13:29:05 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 79
+[11-Jan-2019 13:29:05 Europe/Berlin] PHP Notice:  Undefined index: email in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 80
+[11-Jan-2019 13:30:45 Europe/Berlin] PHP Notice:  Trying to get property 'first_name' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 81
+[11-Jan-2019 13:30:45 Europe/Berlin] PHP Notice:  Trying to get property 'second_name' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 82
+[11-Jan-2019 13:30:45 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 83
+[11-Jan-2019 13:30:45 Europe/Berlin] PHP Notice:  Trying to get property 'email' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 84
+[11-Jan-2019 13:31:26 Europe/Berlin] PHP Notice:  Trying to get property 'first_name' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 73
+[11-Jan-2019 13:31:26 Europe/Berlin] PHP Notice:  Trying to get property 'first_name' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 82
+[11-Jan-2019 13:31:26 Europe/Berlin] PHP Notice:  Trying to get property 'second_name' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 83
+[11-Jan-2019 13:31:26 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 84
+[11-Jan-2019 13:31:26 Europe/Berlin] PHP Notice:  Trying to get property 'email' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 85
+[11-Jan-2019 13:31:46 Europe/Berlin] PHP Notice:  Trying to get property 'first_name' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 82
+[11-Jan-2019 13:31:46 Europe/Berlin] PHP Notice:  Trying to get property 'second_name' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 83
+[11-Jan-2019 13:31:46 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 84
+[11-Jan-2019 13:31:46 Europe/Berlin] PHP Notice:  Trying to get property 'email' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 85
+[11-Jan-2019 13:32:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 50
+[11-Jan-2019 13:33:02 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 22
+[11-Jan-2019 13:34:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 50
+[11-Jan-2019 13:34:48 Europe/Berlin] PHP Warning:  Use of undefined constant user - assumed 'user' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 21
+[11-Jan-2019 13:34:48 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 23
+[11-Jan-2019 13:37:11 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 51
+[11-Jan-2019 13:37:21 Europe/Berlin] PHP Warning:  Use of undefined constant user - assumed 'user' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 21
+[11-Jan-2019 13:37:21 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 23
+[11-Jan-2019 13:37:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 51
+[11-Jan-2019 13:38:33 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 21
+[11-Jan-2019 13:39:00 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\proiect_php\app\Models\User.php on line 21
+[12-Jan-2019 13:26:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php:76
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\UserController->userPersonalDataPageAction(NULL)
+#1 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/user/personald...', NULL)
+#2 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#3 {main}
+  thrown in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 76
+[12-Jan-2019 13:36:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 13:37:28 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:37:39 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 13:37:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 13:38:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:38:16 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 13:38:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 13:38:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:38:50 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:38:50 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:38:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:38:52 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:38:52 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:38:53 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:38:53 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:38:53 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:38:58 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 13:39:13 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[12-Jan-2019 13:39:33 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[12-Jan-2019 13:39:48 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 109
+[12-Jan-2019 13:39:49 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 110
+[12-Jan-2019 13:39:49 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 111
+[12-Jan-2019 13:39:49 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 112
+[12-Jan-2019 13:39:49 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 113
+[12-Jan-2019 13:40:19 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 126
+[12-Jan-2019 13:40:21 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 134
+[12-Jan-2019 13:40:21 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 135
+[12-Jan-2019 13:40:21 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 136
+[12-Jan-2019 13:40:21 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 137
+[12-Jan-2019 13:40:29 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 126
+[12-Jan-2019 13:40:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 49
+[12-Jan-2019 13:49:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:49:09 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:49:09 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:49:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:49:20 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:49:26 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:49:26 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:49:26 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:49:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:49:28 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:49:28 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:49:28 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:49:28 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:49:28 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:51:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 13:51:53 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[12-Jan-2019 13:51:57 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[12-Jan-2019 13:52:00 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[12-Jan-2019 13:52:10 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 20
+[12-Jan-2019 13:54:28 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 13:55:08 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:55:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 13:55:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 13:55:24 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:55:24 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 13:55:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:00:05 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:00:05 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:00:05 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:00:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:00:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:00:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:00:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:01:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:01:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:02:31 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[12-Jan-2019 14:02:34 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 138
+[12-Jan-2019 14:02:34 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 139
+[12-Jan-2019 14:02:34 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 140
+[12-Jan-2019 14:02:34 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 141
+[12-Jan-2019 14:02:44 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[12-Jan-2019 14:02:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:08:20 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 14:08:30 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 14:08:35 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 14:08:42 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 14:08:50 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 14:17:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:18:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:18:31 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:18:31 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:18:36 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:18:36 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:18:36 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:18:37 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:18:37 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:18:37 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:18:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:18:42 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:18:42 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 38
+[12-Jan-2019 14:18:42 Europe/Berlin] PHP Notice:  Trying to get property 'locuri_disponibile' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 38
+[12-Jan-2019 14:19:03 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:19:03 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:19:03 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:19:05 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:19:06 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:19:06 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:19:14 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:19:14 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:19:14 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 38
+[12-Jan-2019 14:19:14 Europe/Berlin] PHP Notice:  Trying to get property 'locuri_disponibile' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 38
+[12-Jan-2019 14:20:21 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:20:21 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 28
+[12-Jan-2019 14:20:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:20:21 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:20:23 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:20:23 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:20:23 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:20:28 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:20:28 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 28
+[12-Jan-2019 14:20:28 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 38
+[12-Jan-2019 14:20:28 Europe/Berlin] PHP Notice:  Trying to get property 'locuri_disponibile' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 38
+[12-Jan-2019 14:20:41 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:20:41 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 28
+[12-Jan-2019 14:20:41 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:20:41 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:20:43 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:20:43 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:20:43 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:35:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:35:24 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 29
+[12-Jan-2019 14:35:24 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:35:24 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:35:29 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:35:29 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 29
+[12-Jan-2019 14:35:29 Europe/Berlin] PHP Notice:  Trying to get property 'locuri_disponibile' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[12-Jan-2019 14:37:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:37:33 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:37:33 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:37:33 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:39:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:39:38 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 39
+[12-Jan-2019 14:39:38 Europe/Berlin] PHP Notice:  Trying to get property 'locuri_disponibile' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[12-Jan-2019 14:40:43 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:40:43 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:40:43 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:40:45 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:40:45 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:40:45 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:40:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:41:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:41:00 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:00 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:05 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:41:11 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:41:11 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:11 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:41:13 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:13 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:41:14 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:14 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 37
+[12-Jan-2019 14:41:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:41:42 Europe/Berlin] PHP Notice:  Undefined index: deleteMyTripId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 29
+[12-Jan-2019 14:41:42 Europe/Berlin] PHP Notice:  Trying to get property 'locuri_disponibile' of non-object in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 40
+[12-Jan-2019 14:42:37 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:42:37 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:37 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:42:39 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:39 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:42:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:42:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:42:51 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:51 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:53 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:42:53 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:53 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[12-Jan-2019 14:42:54 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:42:54 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 35
+[12-Jan-2019 14:46:20 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 14:46:26 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 14:46:26 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:46:26 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:46:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 14:46:27 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:46:27 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:46:33 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 14:46:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 14:46:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 14:46:40 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:46:40 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:46:41 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 24
+[12-Jan-2019 14:46:41 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:46:41 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 34
+[12-Jan-2019 14:50:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:51:03 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:51:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:51:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:51:44 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:51:44 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:51:44 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:51:48 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:51:53 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:52:11 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:57:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:58:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:58:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:58:27 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:58:28 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:58:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:58:39 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:58:39 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:58:39 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:58:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:58:41 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:58:41 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 14:58:45 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:58:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 14:59:03 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:59:21 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 14:59:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 15:00:04 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 15:00:17 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 15:00:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 15:00:50 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 15:00:50 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 15:00:50 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 15:00:55 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 15:00:55 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 15:00:55 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 15:00:56 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 23
+[12-Jan-2019 15:00:56 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 15:00:56 Europe/Berlin] PHP Notice:  Undefined index: submitButtonId in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 33
+[12-Jan-2019 15:01:01 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48
+[12-Jan-2019 15:01:10 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 15:01:12 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 15:01:15 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 15:01:18 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 15:01:27 Europe/Berlin] PHP Notice:  Undefined index: deleteUserId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 21
+[12-Jan-2019 15:01:47 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 112
+[12-Jan-2019 15:01:47 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 113
+[12-Jan-2019 15:01:47 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 114
+[12-Jan-2019 15:01:47 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 115
+[12-Jan-2019 15:01:47 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 116
+[12-Jan-2019 15:02:21 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[12-Jan-2019 15:02:26 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 137
+[12-Jan-2019 15:02:26 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 138
+[12-Jan-2019 15:02:26 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 139
+[12-Jan-2019 15:02:26 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 140
+[12-Jan-2019 15:02:33 Europe/Berlin] PHP Notice:  Undefined index: deleteGuideId in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[12-Jan-2019 15:02:38 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 48

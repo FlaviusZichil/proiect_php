@@ -7,25 +7,14 @@ use Framework\Model;
 class Trip extends Model
 {
     protected $table = "trip";
-    // increase and decrease should be one method
-    public function decreaseNumberOfParticipantsForTrip($tripId){
-        $db = $this->newDbCon();
-        $numberOfParticipants = $this->getFieldBy("locuri_disponibile", "trip_id", $tripId);
-        $participants = $numberOfParticipants->locuri_disponibile;
 
-        if($participants != 1) {
+    public function modifyNumberOfParticipantsForTrip($tripId, $numberOfParticipants){
+        $db = $this->newDbCon();
+
+        if($numberOfParticipants != 1) {
             $stmt = $db->prepare("UPDATE $this->table SET locuri_disponibile=? WHERE trip_id=?");
-            $stmt->execute([$participants - 1, $tripId]);
+            $stmt->execute([$numberOfParticipants, $tripId]);
         }
-    }
-    // increase and decrease should be one method
-    public function increaseNumberOfParticipantsForTrip($tripId){
-        $db = $this->newDbCon();
-        $numberOfParticipants = $this->getFieldBy("locuri_disponibile", "trip_id", $tripId);
-        $participants = $numberOfParticipants->locuri_disponibile;
-
-        $stmt = $db->prepare("UPDATE $this->table SET locuri_disponibile=? WHERE trip_id=?");
-        $stmt->execute([$participants + 1, $tripId]);
     }
 
     public function setTripFinalized($tripId, $status){
@@ -40,34 +29,6 @@ class Trip extends Model
         $stmt->execute([$location, $altitude, $startDate, $endDate, $locuri]);
     }
 
-    public function getAllTripsOrderBY(string $way, $column){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table ORDER BY $column $way");
-        $stmt->execute();
-
-        $trips = array();
-
-        while(($row =  $stmt->fetch())) {
-            array_push($trips, $row);
-        }
-        return $trips;
-    }
-
-    public function getTripById($tripId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table WHERE trip_id=?");
-        $stmt->execute([$tripId]);
-
-        return $stmt->fetchAll();
-    }
-
-    public function getAllUnfinishedTrips($status){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table WHERE status=?");
-        $stmt->execute([$status]);
-        return $stmt->fetchAll();
-    }
-
     public function getAllTripsForUser(string $email){
         $db = $this->newDbCon();
         $stmt = $db->prepare("SELECT trip.trip_id, location, altitude, start_date, end_date FROM user
@@ -75,20 +36,6 @@ class Trip extends Model
                                        INNER JOIN trip ON user_trips.trip_id = trip.trip_id
                                        WHERE user.email=?");
         $stmt->execute([$email]);
-        $trips = array();
-
-        while(($row =  $stmt->fetch())) {
-            array_push($trips, $row);
-        }
-
-        return $trips;
-    }
-
-    public function getAllTrips(){
-        return $allTrips = $this->getAll();
-    }
-
-    public function deleteTripById($tripId){
-        $this->deleteById($tripId, "trip_id");
+        return $stmt->fetchAll();
     }
 }

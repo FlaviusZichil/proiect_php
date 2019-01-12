@@ -27,7 +27,7 @@ class RegisterController extends Controller
             $user->registerUser($firstName, $secondName, $email, $password);
 
             // gets current user id
-            $addedUserID = $user->getUserIdByEmail($email);
+            $addedUserID = $user->getFieldBy("user_id", "email", $email);
             $addedUserAsArray = json_decode(json_encode($addedUserID), true);
 
             // starts the session and adds user data to it
@@ -47,7 +47,7 @@ class RegisterController extends Controller
         $user = new User();
         $emailTakenValidator = false;
 
-        if($user->getUserByEmail($email) != null){
+        if($user->getFieldBy("email", "email", $email) != null){
             $emailTakenValidator = true;
         }
 

@@ -5,6 +5,7 @@ use App\Models\Guide;
 use App\Models\Medal;
 use App\Models\Trip;
 use App\Models\User;
+use App\Models\UserMedals;
 use App\Models\UserTrips;
 use Framework\Controller;
 
@@ -17,25 +18,25 @@ class AdminController extends Controller
 
     public function adminAllUsersPageAction(){
         $user = new User();
-        $user->deleteUserById($_POST["deleteUserId"]);
-        $allUsers = $user->getAllUsers();
+        $user->deleteById("user_id", $_POST["deleteUserId"]);
+        $allUsers = $user->getAll();
 
         if(isset($_POST["submit"])){
             switch ($_POST["submit"]){
                 case "numeCrescator": {
-                    $allUsers = $user->getAllUsersOrderBY("ASC", "second_name");
+                    $allUsers = $user->getAllOrderBY("ASC", "second_name");
                     break;
                 }
                 case "numeDescrescator":{
-                    $allUsers = $user->getAllUsersOrderBY("DESC", "second_name");
+                    $allUsers = $user->getAllOrderBY("DESC", "second_name");
                     break;
                 }
                 case "prenumeCrescator":{
-                    $allUsers = $user->getAllUsersOrderBY("ASC", "first_name");
+                    $allUsers = $user->getAllOrderBY("ASC", "first_name");
                     break;
                 }
                 case "prenumeDescrescator":{
-                    $allUsers = $user->getAllUsersOrderBY("DESC", "first_name");
+                    $allUsers = $user->getAllOrderBY("DESC", "first_name");
                     break;
                 }
             }
@@ -51,31 +52,33 @@ class AdminController extends Controller
         $user = new User();
         $medal = new Medal();
         $userTrips = new UserTrips();
+        $userMedals = new UserMedals();
 
         // if delete trip pressed
         if(isset($_POST["deleteTripId"])){
-            $trip->deleteTripById($_POST["deleteTripId"]);
+            $trip->deleteById("trip_id", $_POST["deleteTripId"]);
         }
 
         // gets all trips to show in view
-        $allTrips = $trip->getAllTrips();
+        $allTrips = $trip->getAll();
 
         // if set finished pressed
         if(isset($_POST["setFinalizedTripId"])){
             $trip->setTripFinalized($_POST["setFinalizedTripId"], "Finalizata");
-            $allTrips = $trip->getAllTrips();
+            $allTrips = $trip->getAll();
             $userIdsAsStdObject = $userTrips->getUserIdsFromUserTrips($_POST["setFinalizedTripId"]);
             $userIdsAsArray = json_decode(json_encode($userIdsAsStdObject), true);
 
-            $selectedTripAsStdObject = $trip->getTripById($_POST["setFinalizedTripId"]);
+            $selectedTripAsStdObject = $trip->getById("trip_id", $_POST["setFinalizedTripId"]);
             $selectedTripAsArray = json_decode(json_encode($selectedTripAsStdObject), true);
 
-            $medalIdAsStdObject = $medal->getMedalIdByLocation($selectedTripAsArray[0]["location"]);
+            $medalIdAsStdObject = $medal->getFieldBy("medal_id", "location", $selectedTripAsArray[0]["location"]);
             $medalIdAsArray = json_decode(json_encode($medalIdAsStdObject), true);
 
             for($i = 0; $i < sizeof($userIdsAsArray); $i++){
                 if(!$medal->hasAlreadyThisMedal($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"])){
-                    $medal->addMedal($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"]);
+//                    $medal->addMedal($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"]);
+                    $userMedals->addMedalForUser($userIdsAsArray[$i]["user_id"], $medalIdAsArray["medal_id"]);
                 }
             }
         }
@@ -83,19 +86,19 @@ class AdminController extends Controller
         if(isset($_POST["submit"])){
             switch ($_POST["submit"]){
                 case "locationAscending": {
-                    $allTrips = $trip->getAllTripsOrderBY("ASC", "location");
+                    $allTrips = $trip->getAllOrderBY("ASC", "location");
                     break;
                 }
                 case "locationDescending":{
-                    $allTrips = $trip->getAllTripsOrderBY("DESC", "location");
+                    $allTrips = $trip->getAllOrderBY("DESC", "location");
                     break;
                 }
                 case "statusAscending":{
-                    $allTrips = $trip->getAllTripsOrderBY("ASC", "status");
+                    $allTrips = $trip->getAllOrderBY("ASC", "status");
                     break;
                 }
                 case "statusDescending":{
-                    $allTrips = $trip->getAllTripsOrderBY("DESC", "status");
+                    $allTrips = $trip->getAllOrderBY("DESC", "status");
                     break;
                 }
             }
@@ -123,7 +126,7 @@ class AdminController extends Controller
 
     public function adminAllGuides(){
         $guide = new Guide();
-        $guide->deleteGuideById($_POST["deleteGuideId"]);
+        $guide->deleteById("guide_id", $_POST["deleteGuideId"]);
         $allGuides = $guide->getAll();
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */

@@ -8,16 +8,11 @@
 
 namespace App\Models;
 
-
 use Framework\Model;
 
 class Guide extends Model
 {
     protected $table = "guide";
-
-    public function deleteGuideById($guideId){
-        $this->deleteById($guideId, "guide_id");
-    }
 
     public function addNewGuide($firstName, $secondName, $experience, $city){
         $db = $this->newDbCon();

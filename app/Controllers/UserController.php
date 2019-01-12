@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\medal;
 use App\Models\Trip;
 use App\Models\User;
 use App\Models\UserTrips;
@@ -13,7 +12,7 @@ class UserController extends Controller
 {
     public function userPageAction(){
         $trip = new Trip();
-        $allTrips = $trip->getAllUnfinishedTrips("Activa");
+        $allTrips = $trip->getAllByField("status", "Activa");
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("User/userView.html", ["allTrips" => $allTrips]);
@@ -26,14 +25,15 @@ class UserController extends Controller
         $userTrips = new UserTrips();
 
         if(isset($_POST["deleteMyTripId"])){
-            $userTrips->deleteTripForUser($_POST["deleteMyTripId"]);
-
-            $trip->increaseNumberOfParticipantsForTrip($_POST["deleteMyTripId"]);
+            $userTrips->deleteById("trip_id", $_POST["deleteMyTripId"]);
+            $numberOfParticipants = $trip->getFieldBy("locuri_disponibile", "trip_id", $_POST["deleteMyTripId"]);
+            $trip->modifyNumberOfParticipantsForTrip($_POST["deleteMyTripId"], $numberOfParticipants->locuri_disponibile + 1);
         }
 
         if(!$this->isAlreadyRegisteredForThisTrip($_SESSION["user_id"], $_POST['submitButtonId']) && $_POST['submitButtonId'] != null){
             $userTrips->addTripForUser($_SESSION["user_id"], $_POST['submitButtonId']);
-            $trip->decreaseNumberOfParticipantsForTrip($_POST['submitButtonId']);
+            $numberOfParticipants = $trip->getFieldBy("locuri_disponibile", "trip_id", $_POST["submitButtonId"]);
+            $trip->modifyNumberOfParticipantsForTrip($_POST["submitButtonId"], $numberOfParticipants->locuri_disponibile - 1);
         }
 
         $allTripsForUser = $trip->getAllTripsForUser($_SESSION["email"]);
@@ -56,7 +56,7 @@ class UserController extends Controller
     // /user/medals/
     public function userMedalsPageAction(){
         $medal = new \App\Models\Medal();
-        $allMedals = $medal->getAllFromMedal();
+        $allMedals = $medal->getAll();
         $userMedals = $medal->getAllMedalsForUser($_SESSION["email"]);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
@@ -66,16 +66,13 @@ class UserController extends Controller
     // /user/personaldata/
     public function userPersonalDataPageAction(){
         $user = new User();
-        // gets data from db as stdClass
-        $userToDisplay = $user->getAllAboutUserByEmail($_SESSION["email"]);
-        // converts from stdClass to array
-        $userAsArray = json_decode(json_encode($userToDisplay), true);
+        $userToDisplay = $user->getRowByField("email", $_SESSION["email"]);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("User/personalData.html", ["first_name" => $userAsArray["first_name"],
-                                                            "second_name" => $userAsArray["second_name"],
-                                                            "password" => $userAsArray["password"],
-                                                            "email" => $userAsArray["email"]]);
+        echo $this->view("User/personalData.html", ["first_name" =>  $userToDisplay->first_name,
+                                                            "second_name" =>  $userToDisplay->second_name,
+                                                            "password" =>  $userToDisplay->password,
+                                                            "email" =>  $userToDisplay->email]);
     }
 
     // /user/save/

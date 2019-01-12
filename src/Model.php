@@ -8,7 +8,7 @@ use App\Config;
 abstract class Model
 {
     protected $table;
-    // good
+
     public Function newDbCon($resultAsArray = false)
     {
         $dsn = Config::DB['driver'];
@@ -35,64 +35,46 @@ abstract class Model
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-    // good
+
     public function getAll(): array{
         $db = $this->newDbCon();
         $stmt = $db->query("SELECT * FROM $this->table");
         return $stmt->fetchAll();
     }
-    // good
-    public function getById($id){
+
+    public function getById($id, $value){
         $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table WHERE id=?");
-        $stmt->execute([$id]);
-        return $stmt->fetch();
+        $stmt = $db->prepare("SELECT * FROM $this->table WHERE $id=?");
+        $stmt->execute([$value]);
+        return $stmt->fetchAll();
     }
-    // good
+
     public function getFieldBy($requiredField, $searchField, $data){
         $db = $this->newDbCon();
         $sql = 'SELECT ' . $requiredField . ' FROM ' . $this->table . ' WHERE ' . $searchField . '=?';
         $stmt = $db->prepare($sql);
         $stmt->execute([$data]);
-
         return $stmt->fetch();
     }
-    // good
+
+    public function getRowByField($field, $data){
+        $db = $this->newDbCon();
+        $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $field . '=?';
+        $stmt = $db->prepare($sql);
+        $stmt->execute([$data]);
+        return $stmt->fetch();
+    }
+
     public function getAllByField($field, $data){
         $db = $this->newDbCon();
         $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $field . '=?';
         $stmt = $db->prepare($sql);
         $stmt->execute([$data]);
 
-        return $stmt->fetch();
+        return $stmt->fetchAll();
     }
-    // good
-    protected function prepareDataForStmt(array $data): array{
-        $columns = '';
-        $values = [];
 
-        for($i = 0; $i < count($data); $i++) {
-
-             $values[]= $data[$i];
-             $columns .= "key($data) = ? ";
-             //if we are not at the last element with the iteration
-             if(count($data) < ($i + 1))
-             {
-                 $columns .= "AND ";
-             }
-        }
-        return [$columns, $values];
-    }
-    // good
-    public Function find(array $data)
-    {
-        list($columns, $values) = $this->prepareDataForStmt($data);
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table WHERE $columns");
-        return $stmt->execute([$values]);
-    }
-    // good
-    public function deleteById($id, $column){
+    public function deleteById($column, $id){
         $db = $this->newDbCon();
         $stmt = $db->prepare("DELETE FROM $this->table WHERE $column=?");
         $stmt->execute([$id]);
@@ -102,5 +84,12 @@ abstract class Model
         $db = $this->newDbCon();
         $stmt = $db->prepare('UPDATE ' . $this->table . ' SET ' . $field .'=?' . ' WHERE ' . $id . '=?');
         $stmt->execute([$field, $id]);
+    }
+
+    public function getAllOrderBY(string $way, $column){
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * FROM $this->table ORDER BY $column $way");
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 }

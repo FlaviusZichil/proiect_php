@@ -8,7 +8,6 @@
 
 namespace App\Models;
 
-
 use Framework\Model;
 
 class UserMedals extends Model

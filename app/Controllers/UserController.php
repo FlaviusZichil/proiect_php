@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\Trip;
 use App\Models\User;
 use App\Models\UserTrips;
+use App\Validators\Validator;
 use Framework\Controller;
 use Framework\Model;
 
@@ -87,7 +88,7 @@ class UserController extends Controller
 
     // /user/save/
     public function userSavePersonalData(){
-        $validator = new RegisterController();
+        $validator = new Validator();
         $user = new User();
         // gets data from form
         $firstName = $_POST["firstNameInput"];

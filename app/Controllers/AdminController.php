@@ -7,6 +7,7 @@ use App\Models\Trip;
 use App\Models\User;
 use App\Models\UserMedals;
 use App\Models\UserTrips;
+use App\Validators\Validator;
 use Framework\Controller;
 
 class AdminController extends Controller
@@ -123,6 +124,7 @@ class AdminController extends Controller
     }
 
     public function adminAddTrip(){
+        $validator = new Validator();
         // gets data about new trip from form
         $newLocation = $_POST["tripLocation"];
         $newAltitude = $_POST["tripAltitude"];
@@ -130,13 +132,20 @@ class AdminController extends Controller
         $newEndDate = $_POST["tripEndDate"];
         $newAvailableRegistrations = $_POST["tripAvailableRegistrations"];
         // tests if data is valid
-        if($newLocation != null && $newAltitude != null && $newStartDate != null && $newEndDate != null && $newAvailableRegistrations != null){
+        if($validator->isNameValid($newLocation) && $newAltitude != null && $newStartDate != null && $newEndDate != null && $newAvailableRegistrations != null){
             $trip = new Trip();
             // adds new trip to DB
             $trip->addNewTrip($newLocation, $newAltitude, $newStartDate, $newEndDate, $newAvailableRegistrations);
+            $successMessage = "Calatorie adaugata cu succes";
+        }
+        elseif($newLocation == null || $newAltitude == null || $newStartDate == null || $newEndDate == null){
+            // shows no message if no data is entered
+        }
+        else{
+            $failMessage = "Campul locatie este completat incorect";
         }
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("Admin/addTrip.html");
+        echo $this->view("Admin/addTrip.html", ["successMessage" => $successMessage, "failMessage" => $failMessage]);
     }
 
     public function adminAllGuides(){
@@ -152,19 +161,27 @@ class AdminController extends Controller
         echo $this->view("Admin/allGuides.html", ["allGuides" => $allGuides]);
     }
 
-    public function adminAddGuides(){
+    public function adminAddGuide(){
+        $validator = new Validator();
         // gets new guide data from form
         $newGuideFirstName = $_POST["guideFirstName"];
         $newGuideSecondName = $_POST["guideSecondName"];
         $newGuideCity = $_POST["guideCity"];
         $newGuideExperience = $_POST["guideExperience"];
         // tests is data is valid
-        if($newGuideFirstName != null && $newGuideSecondName != null && $newGuideCity != null && $newGuideExperience != null){
+        if($validator->isNameValid($newGuideFirstName) && $validator->isNameValid($newGuideSecondName) && $validator->isNameValid($newGuideCity) && $newGuideExperience != null){
             $guide = new Guide();
             // adds new guide to DB
             $guide->addNewGuide($newGuideFirstName, $newGuideSecondName, $newGuideExperience, $newGuideCity);
+            $successMessage = "Ghid adaugat cu success";
+        }
+        elseif($newGuideFirstName == null || $newGuideSecondName == null || $newGuideCity == null){
+            // shows no message if no data is entered
+        }
+        else{
+            $failMessage = "Unul dintre campurile Nume, Prenume sau Oras sunt completate incorect";
         }
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("Admin/addGuide.html");
+        echo $this->view("Admin/addGuide.html", ["successMessage" => $successMessage, "failMessage" => $failMessage]);
     }
 }

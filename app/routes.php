@@ -36,6 +36,6 @@
 
         '/admin/guides/' =>          ['controller' => 'AdminController', 'action' => 'adminAllGuides', 'guard' => "Authenticated"],
 
-        '/admin/guide/add/' =>      ['controller' => 'AdminController', 'action' => 'adminAddGuides', 'guard' => "Authenticated"],
+        '/admin/guide/add/' =>      ['controller' => 'AdminController', 'action' => 'adminAddGuide', 'guard' => "Authenticated"],
 
     ];

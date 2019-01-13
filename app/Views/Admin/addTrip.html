@@ -18,23 +18,33 @@
                     </div>
                     <div class="form-group">
                         <label for="altitude">Altitudine</label>
-                        <input type="text" class="form-control" id="altitude" name="tripAltitude" placeholder="Altitudine" required>
+                        <input type="number" min="1600" max="2544" class="form-control" id="altitude" name="tripAltitude" placeholder="Altitudine" required>
                     </div>
                     <div class="form-group">
                         <label for="startDate">Data inceput</label>
-                        <input type="text" class="form-control" id="startDate" name="tripStartDate" placeholder="Data inceput" required>
+                        <input type="date" class="form-control" id="startDate" name="tripStartDate" placeholder="Data inceput" required>
                     </div>
                     <div class="form-group">
                         <label for="endDate">Data sfarsit</label>
-                        <input type="text" class="form-control" id="endDate" name="tripEndDate" placeholder="Data sfarsit" required>
+                        <input type="date" class="form-control" id="endDate" name="tripEndDate" placeholder="Data sfarsit" required>
                     </div>
                     <div class="form-group">
                         <label for="locuri">Numar de locuri disponibile</label>
-                        <input type="text" class="form-control" id="locuri" name="tripAvailableRegistrations" placeholder="Numar de locuri disponibile" required>
+                        <input type="number" min="5" max="25" class="form-control" id="locuri" name="tripAvailableRegistrations" placeholder="Numar de locuri disponibile" required>
                     </div>
-                         <input id="registerSubmit" type="submit" name="submitAddTrip" class="btn btn-success btn-block" value="Adauga ascensiune">
-                         <a href="/admin/trips/" class="btn btn-info btn-block">Toate ascensiunile </a>
-                     </div>
+                    <div class="form-group" style="background-color: greenyellow">
+                        {% if successMessage %}
+                            <p style="text-align: center"> {{successMessage}} </p>
+                        {% endif %}
+                    </div>
+                    <div class="form-group" style="background-color: orangered">
+                        {% if failMessage %}
+                            <p style="text-align: center; color: white"> {{failMessage}} </p>
+                        {% endif %}
+                    </div>
+                    <input id="registerSubmit" type="submit" name="submitAddTrip" class="btn btn-success btn-block" value="Adauga ascensiune">
+                    <a href="/admin/trips/" class="btn btn-info btn-block">Toate ascensiunile </a>
+            </div>
             <div class="col-md-3 col-sm-4 col-xs-12 header-coll"></div>
         </div>
     </form>

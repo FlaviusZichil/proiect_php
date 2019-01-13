@@ -3,25 +3,33 @@
 namespace App\Controllers;
 
 use App\Models\User;
+use App\Validators\Validator;
 use Framework\Controller;
 
 class RegisterController extends Controller
 {
     // /register/
     public function registerPageAction():void {
+        session_start();
+
+        if(isset($_SESSION["failRegisterMessage"])){
+            $failRegisterMessage = $_SESSION["failRegisterMessage"];
+            unset($_SESSION["failRegisterMessage"]);
+        }
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("Home/registerView.html", []);
+        echo $this->view("Home/registerView.html", ["failRegisterMessage" => $failRegisterMessage]);
     }
 
     // /register/auth/
     public function register():void {
+        $validator = new Validator();
         // gets data from form
         $firstName = $_POST["registerFirstName"];
         $secondName = $_POST["registerSecondName"];
         $email = $_POST["registerEmail"];
         $password = $_POST["registerPassword"];
 
-        if($this->isValidFormData($firstName, $secondName, $email, $password) && !$this->isEmailTaken($email)){
+        if($this->isValidFormData($firstName, $secondName, $email, $password) && !$validator->isEmailTaken($email)){
             $user = new User();
             // registers the user
             $user->registerUser($firstName, $secondName, $email, $password);
@@ -36,53 +44,19 @@ class RegisterController extends Controller
 
             header("Location: /user/");
         }else{
+            session_start();
+            $_SESSION["failRegisterMessage"] = "Date incorecte";
             header("Location: /register/");
         }
     }
 
-    private function isEmailTaken(string $email):bool {
-        $user = new User();
-        $emailTakenValidator = false;
-
-        if($user->getFieldBy("email", "email", $email) != null){
-            $emailTakenValidator = true;
-        }
-        return $emailTakenValidator;
-    }
-
-    public function isNameValid($username): bool{
-        $usernameValidator = true;
-
-        if(!isset($username) || strlen($username) < 2) {
-            $usernameValidator = false;
-        }
-        return $usernameValidator;
-    }
-
-    private function isEmailValid($email): bool{
-        $emailValidator = true;
-
-        if(!isset($email) || strlen($email) < 10 || strpos('@', $email)) {
-            $emailValidator = false;
-        }
-        return $emailValidator;
-    }
-
-    public function isPasswordValid($password): bool{
-        $passwordValidator = true;
-
-        if(!isset($password) || strlen($password) < 6) {
-            $passwordValidator = false;
-        }
-        return $passwordValidator;
-    }
-
     private function isValidFormData(string $firstName, $secondName, $email, $password):bool {
+        $validator = new Validator();
         $formValidator = false;
 
-        if($this->isNameValid($firstName) && $this->isNameValid($secondName)){
-            if($this->isEmailValid($email)){
-                if($this->isPasswordValid($password)){
+        if($validator->isNameValid($firstName) && $validator->isNameValid($secondName)){
+            if($validator->isEmailValid($email)){
+                if($validator->isPasswordValid($password)){
                     $formValidator = true;
                 }
             }

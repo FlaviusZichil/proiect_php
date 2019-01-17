@@ -17,7 +17,7 @@
                     </div>
                         <table class="table table-sm">
                             <thead class="thead-dark">
-                            <tr align="center">
+                            <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nume</th>
                                 <th scope="col">Prenume</th>
@@ -30,11 +30,11 @@
                             {% for guide in allGuides %}
                             <tr>
                                 <th scope="row">{{guide.guide_id}}</th>
-                                <td align="center">{{guide.first_name}}</td>
-                                <td align="center">{{guide.second_name}}</td>
-                                <td align="center">{{guide.years_of_experience}}</td>
-                                <td align="center">{{guide.city}}</td>
-                                <td align="center">
+                                <td>{{guide.first_name}}</td>
+                                <td>{{guide.second_name}}</td>
+                                <td>{{guide.years_of_experience}}</td>
+                                <td>{{guide.city}}</td>
+                                <td>
                                     <button class="btn btn-danger" type="submit" name="deleteGuideId" value="{{ guide.guide_id }}">Elimina ghid</button>
                                 </td>
                             </tr>

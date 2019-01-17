@@ -45,13 +45,13 @@
                     {% for trip in allTrips %}
                     <tr>
                         <th scope="row">{{trip.trip_id}}</th>
-                        <td align="center">{{trip.location}}</td>
-                        <td align="center">{{trip.altitude}}m</td>
-                        <td align="center">{{trip.start_date}}</td>
-                        <td align="center">{{trip.end_date}}</td>
-                        <td align="center">{{trip.locuri_disponibile}}</td>
-                        <td align="center">{{trip.status}}</td>
-                        <td align="center">
+                        <td class="trip">{{trip.location}}</td>
+                        <td class="trip">{{trip.altitude}}m</td>
+                        <td class="trip">{{trip.start_date}}</td>
+                        <td class="trip">{{trip.end_date}}</td>
+                        <td class="trip">{{trip.locuri_disponibile}}</td>
+                        <td class="trip">{{trip.status}}</td>
+                        <td class="trip">
                             <button class="btn btn-danger" type="submit" name="deleteTripId" value="{{ trip.trip_id }}">Sterge ascensiune</button>
                             <button class="btn btn-success" type="submit" name="setFinalizedTripId" value="{{ trip.trip_id }}">Seteaza ca finalizata</button>
                         </td>

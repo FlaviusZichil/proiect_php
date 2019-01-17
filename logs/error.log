@@ -7800,3 +7800,199 @@ Stack trace:
 [13-Jan-2019 17:17:26 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
 [13-Jan-2019 17:17:27 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
 [13-Jan-2019 17:17:29 Europe/Berlin] PHP Notice:  Undefined variable: failRegisterMessage in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 20
+[14-Jan-2019 10:32:51 Europe/Berlin] PHP Notice:  Undefined variable: failRegisterMessage in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 20
+[14-Jan-2019 10:33:19 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[14-Jan-2019 10:33:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\UserController.php on line 25
+[14-Jan-2019 10:38:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[14-Jan-2019 10:38:59 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[14-Jan-2019 10:39:12 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[14-Jan-2019 10:39:13 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[14-Jan-2019 10:39:39 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[14-Jan-2019 10:39:40 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[14-Jan-2019 10:40:12 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[14-Jan-2019 10:40:12 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[14-Jan-2019 10:40:12 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[14-Jan-2019 10:40:12 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 132
+[14-Jan-2019 10:40:12 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 133
+[14-Jan-2019 10:40:12 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[14-Jan-2019 10:40:12 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[14-Jan-2019 10:40:30 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[14-Jan-2019 10:40:49 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[15-Jan-2019 20:43:40 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[15-Jan-2019 20:43:50 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\proiect_php\src\Model.php:34
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(39): Framework\Model->newDbCon()
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(52): Framework\Model->getAll()
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 34
+[15-Jan-2019 20:44:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\proiect_php\src\Model.php:34
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(39): Framework\Model->newDbCon()
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(52): Framework\Model->getAll()
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 34
+[15-Jan-2019 20:44:29 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\proiect_php\src\Model.php:34
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(39): Framework\Model->newDbCon()
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(52): Framework\Model->getAll()
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 34
+[15-Jan-2019 20:44:30 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\proiect_php\src\Model.php:34
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(39): Framework\Model->newDbCon()
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(52): Framework\Model->getAll()
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 34
+[15-Jan-2019 20:44:32 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\proiect_php\src\Model.php:34
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(39): Framework\Model->newDbCon()
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(52): Framework\Model->getAll()
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllTripsPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/trips/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 34
+[15-Jan-2019 20:44:41 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\proiect_php\src\Model.php:34
+Stack trace:
+#0 C:\xampp\htdocs\proiect_php\src\Model.php(39): Framework\Model->newDbCon()
+#1 C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php(28): Framework\Model->getAll()
+#2 C:\xampp\htdocs\proiect_php\src\Router.php(31): App\Controllers\AdminController->adminAllUsersPageAction(NULL)
+#3 C:\xampp\htdocs\proiect_php\src\Router.php(54): Framework\Router->applyActionFromController('/admin/users/', NULL)
+#4 C:\xampp\htdocs\proiect_php\public\index.php(24): Framework\Router->getResourceFromUri()
+#5 {main}
+  thrown in C:\xampp\htdocs\proiect_php\src\Model.php on line 34
+[15-Jan-2019 20:45:31 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[15-Jan-2019 20:45:31 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[15-Jan-2019 20:45:31 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[15-Jan-2019 20:45:31 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 132
+[15-Jan-2019 20:45:31 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 133
+[15-Jan-2019 20:45:31 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:45:31 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:45:52 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:46:06 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:46:14 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[15-Jan-2019 20:46:14 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[15-Jan-2019 20:46:14 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[15-Jan-2019 20:46:14 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[15-Jan-2019 20:46:14 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:46:14 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:46:20 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:46:23 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[15-Jan-2019 20:46:23 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[15-Jan-2019 20:46:23 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[15-Jan-2019 20:46:23 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[15-Jan-2019 20:46:23 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:46:23 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:46:27 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:46:31 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[15-Jan-2019 20:46:31 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[15-Jan-2019 20:46:31 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[15-Jan-2019 20:46:31 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 132
+[15-Jan-2019 20:46:31 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 133
+[15-Jan-2019 20:46:31 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:46:31 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:47:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[15-Jan-2019 20:47:59 Europe/Berlin] PHP Notice:  Undefined variable: failRegisterMessage in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 20
+[15-Jan-2019 20:48:15 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[15-Jan-2019 20:52:11 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[15-Jan-2019 20:52:21 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[15-Jan-2019 20:52:21 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[15-Jan-2019 20:52:21 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[15-Jan-2019 20:52:21 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 132
+[15-Jan-2019 20:52:21 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 133
+[15-Jan-2019 20:52:21 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:52:21 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:52:39 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[15-Jan-2019 20:54:02 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[15-Jan-2019 20:54:02 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[15-Jan-2019 20:54:02 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[15-Jan-2019 20:54:02 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[15-Jan-2019 20:54:02 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:54:02 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:54:05 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:54:23 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[15-Jan-2019 20:54:23 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[15-Jan-2019 20:54:23 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[15-Jan-2019 20:54:23 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[15-Jan-2019 20:54:23 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:54:23 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:54:27 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:55:39 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:59:13 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 20:59:52 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[15-Jan-2019 21:01:34 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:11:57 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[17-Jan-2019 22:12:07 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[17-Jan-2019 22:12:07 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[17-Jan-2019 22:12:07 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[17-Jan-2019 22:12:07 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[17-Jan-2019 22:12:07 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:12:07 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:12:11 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:13:29 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:13:34 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[17-Jan-2019 22:13:34 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[17-Jan-2019 22:13:34 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[17-Jan-2019 22:13:34 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 132
+[17-Jan-2019 22:13:34 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 133
+[17-Jan-2019 22:13:34 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:13:34 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:13:47 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:14:01 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:17:10 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[17-Jan-2019 22:17:11 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[17-Jan-2019 22:22:14 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[17-Jan-2019 22:22:14 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[17-Jan-2019 22:22:14 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[17-Jan-2019 22:22:14 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[17-Jan-2019 22:22:14 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:22:14 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:22:38 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[17-Jan-2019 22:22:38 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[17-Jan-2019 22:22:38 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[17-Jan-2019 22:22:38 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[17-Jan-2019 22:22:38 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:22:38 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:22:43 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:22:53 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:23:18 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[17-Jan-2019 22:23:18 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[17-Jan-2019 22:23:18 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[17-Jan-2019 22:23:18 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 132
+[17-Jan-2019 22:23:18 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 133
+[17-Jan-2019 22:23:18 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:23:18 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:23:29 Europe/Berlin] PHP Notice:  Undefined index: tripLocation in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 129
+[17-Jan-2019 22:23:29 Europe/Berlin] PHP Notice:  Undefined index: tripAltitude in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 130
+[17-Jan-2019 22:23:29 Europe/Berlin] PHP Notice:  Undefined index: tripStartDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 131
+[17-Jan-2019 22:23:29 Europe/Berlin] PHP Notice:  Undefined index: tripEndDate in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 132
+[17-Jan-2019 22:23:29 Europe/Berlin] PHP Notice:  Undefined index: tripAvailableRegistrations in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 133
+[17-Jan-2019 22:23:29 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:23:29 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:23:40 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:24:01 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 148
+[17-Jan-2019 22:25:48 Europe/Berlin] PHP Notice:  Undefined index: guideFirstName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 167
+[17-Jan-2019 22:25:48 Europe/Berlin] PHP Notice:  Undefined index: guideSecondName in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 168
+[17-Jan-2019 22:25:48 Europe/Berlin] PHP Notice:  Undefined index: guideCity in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 169
+[17-Jan-2019 22:25:48 Europe/Berlin] PHP Notice:  Undefined index: guideExperience in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 170
+[17-Jan-2019 22:25:48 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:25:48 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:25:52 Europe/Berlin] PHP Notice:  Undefined variable: failMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:25:59 Europe/Berlin] PHP Notice:  Undefined variable: successMessage in C:\xampp\htdocs\proiect_php\app\Controllers\AdminController.php on line 188
+[17-Jan-2019 22:26:58 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 56
+[17-Jan-2019 22:26:59 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22
+[17-Jan-2019 22:28:51 Europe/Berlin] PHP Notice:  Undefined variable: failRegisterMessage in C:\xampp\htdocs\proiect_php\app\Controllers\RegisterController.php on line 20
+[17-Jan-2019 22:30:09 Europe/Berlin] PHP Notice:  Undefined variable: failLoginMessage in C:\xampp\htdocs\proiect_php\app\Controllers\LoginController.php on line 22

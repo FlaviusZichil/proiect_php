@@ -83,13 +83,17 @@ td {
     margin: 2%;
 }
 
-/*thead, tbody {*/
-    /*display: block;*/
-/*}*/
+.errorMessage {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+.successMessage {
+    background-color: green;
+    color: white;
+    text-align: center;
+}
 
-/*tbody {*/
-    /*display: block;*/
-    /*height: 300px;*/
-    /*overflow-y: auto;    !* Trigger vertical scroll    *!*/
-    /*overflow-x: hidden;  !* Hide the horizontal scroll *!*/
-/*}*/
+td.trip{
+    text-align: center;
+}

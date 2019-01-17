@@ -20,11 +20,7 @@
                     <label for="exampleInputPassword1">Parola</label>
                     <input type="password" name="passwordLogin" class="form-control" id="exampleInputPassword1" placeholder="Parola">
                 </div>
-                <div class="form-group" style="background-color: orangered">
-                    {% if failLoginMessage %}
-                    <p style="text-align: center; color: white"> {{failLoginMessage}} </p>
-                    {% endif %}
-                </div>
+                {{ include('Sections/errorMessage.html') }}
                 <input type="submit" name="submit" class="btn btn-success btn-block" value="Autentificare">
                 <a class="btn btn-primary btn-block" href="/register/" role="button">Inregistrare</a>
             </form>

@@ -14,12 +14,12 @@ class LoginController extends Controller
     public function loginPageAction() {
         session_start();
 
-        if(isset($_SESSION["failLoginMessage"])){
-            $failLoginMessage = $_SESSION["failLoginMessage"];
-            unset($_SESSION["failLoginMessage"]);
+        if(isset($_SESSION["failMessage"])){
+            $failLoginMessage = $_SESSION["failMessage"];
+            unset($_SESSION["failMessage"]);
         }
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("Home/loginView.html", ["failLoginMessage" => $failLoginMessage]);
+        echo $this->view("Home/loginView.html", ["failMessage" => $failLoginMessage]);
     }
 
     // /login/auth/
@@ -46,7 +46,7 @@ class LoginController extends Controller
             }
             else{
                 session_start();
-                $_SESSION["failLoginMessage"] = "Date incorecte";
+                $_SESSION["failMessage"] = "Date incorecte";
                 header("Location: /login/");
             }
         }

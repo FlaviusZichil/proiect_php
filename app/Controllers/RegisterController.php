@@ -12,12 +12,12 @@ class RegisterController extends Controller
     public function registerPageAction():void {
         session_start();
 
-        if(isset($_SESSION["failRegisterMessage"])){
-            $failRegisterMessage = $_SESSION["failRegisterMessage"];
-            unset($_SESSION["failRegisterMessage"]);
+        if(isset($_SESSION["failMessage"])){
+            $failRegisterMessage = $_SESSION["failMessage"];
+            unset($_SESSION["failMessage"]);
         }
         /** @noinspection PhpVoidFunctionResultUsedInspection */
-        echo $this->view("Home/registerView.html", ["failRegisterMessage" => $failRegisterMessage]);
+        echo $this->view("Home/registerView.html", ["failMessage" => $failRegisterMessage]);
     }
 
     // /register/auth/
@@ -45,7 +45,7 @@ class RegisterController extends Controller
             header("Location: /user/");
         }else{
             session_start();
-            $_SESSION["failRegisterMessage"] = "Date incorecte";
+            $_SESSION["failMessage"] = "Date incorecte";
             header("Location: /register/");
         }
     }
@@ -54,13 +54,13 @@ class RegisterController extends Controller
         $validator = new Validator();
         $formValidator = false;
 
-        if($validator->isNameValid($firstName) && $validator->isNameValid($secondName)){
-            if($validator->isEmailValid($email)){
-                if($validator->isPasswordValid($password)){
-                    $formValidator = true;
-                }
-            }
+        if($validator->isNameValid($firstName)
+            && $validator->isNameValid($secondName)
+            && $validator->isEmailValid($email)
+            && $validator->isPasswordValid($password)){
+            $formValidator = true;
         }
+
         return $formValidator;
     }
 }

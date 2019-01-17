@@ -132,13 +132,13 @@ class AdminController extends Controller
         $newEndDate = $_POST["tripEndDate"];
         $newAvailableRegistrations = $_POST["tripAvailableRegistrations"];
         // tests if data is valid
-        if($validator->isNameValid($newLocation) && $newAltitude != null && $newStartDate != null && $newEndDate != null && $newAvailableRegistrations != null){
+        if($validator->isNameValid($newLocation) && $newAltitude && $newStartDate && $newEndDate && $newAvailableRegistrations){
             $trip = new Trip();
             // adds new trip to DB
             $trip->addNewTrip($newLocation, $newAltitude, $newStartDate, $newEndDate, $newAvailableRegistrations);
             $successMessage = "Calatorie adaugata cu succes";
         }
-        elseif($newLocation == null || $newAltitude == null || $newStartDate == null || $newEndDate == null){
+        elseif(!$newLocation || !$newAltitude || !$newStartDate || !$newEndDate){
             // shows no message if no data is entered
         }
         else{
@@ -169,13 +169,16 @@ class AdminController extends Controller
         $newGuideCity = $_POST["guideCity"];
         $newGuideExperience = $_POST["guideExperience"];
         // tests is data is valid
-        if($validator->isNameValid($newGuideFirstName) && $validator->isNameValid($newGuideSecondName) && $validator->isNameValid($newGuideCity) && $newGuideExperience != null){
+        if($newGuideExperience
+            && $validator->isNameValid($newGuideFirstName)
+            && $validator->isNameValid($newGuideSecondName)
+            && $validator->isNameValid($newGuideCity)){
             $guide = new Guide();
             // adds new guide to DB
             $guide->addNewGuide($newGuideFirstName, $newGuideSecondName, $newGuideExperience, $newGuideCity);
             $successMessage = "Ghid adaugat cu success";
         }
-        elseif($newGuideFirstName == null || $newGuideSecondName == null || $newGuideCity == null){
+        elseif(!$newGuideFirstName || !$newGuideSecondName || !$newGuideCity){
             // shows no message if no data is entered
         }
         else{

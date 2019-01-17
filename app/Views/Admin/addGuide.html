@@ -28,16 +28,8 @@
                     <label for="experience">Ani de experienta</label>
                     <input type="number" min="0" max="40" class="form-control" id="experience" name="guideExperience" placeholder="Experienta" required>
                 </div>
-                <div class="form-group" style="background-color: greenyellow">
-                    {% if successMessage %}
-                    <p style="text-align: center"> {{successMessage}} </p>
-                    {% endif %}
-                </div>
-                <div class="form-group" style="background-color: orangered">
-                    {% if failMessage %}
-                    <p style="text-align: center; color: white"> {{failMessage}} </p>
-                    {% endif %}
-                </div>
+                {{ include('Sections/errorMessage.html') }}
+                {{ include('Sections/successMessage.html') }}
                 <input id="registerSubmit" type="submit" name="submitAddGuide" class="btn btn-success btn-block" value="Adauga ghid">
                 <a href="/admin/guides/" class="btn btn-info btn-block">Toti ghizii </a>
             </div>

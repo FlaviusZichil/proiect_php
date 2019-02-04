@@ -13,11 +13,6 @@ class Controller
 //            'cache' => __DIR__ . '/../storage/cache/views',
               'cache' => FALSE
         ));
-
-//        $loader = new \Twig_Loader_Filesystem(__DIR__ . '/../app/Views');
-//        $this->twig = new \Twig_Environment($loader, array(
-//            'cache' => __DIR__ . '/../app/Views',
-//        ));
     }
 
     public function view(string $viewFile, array $params = [])

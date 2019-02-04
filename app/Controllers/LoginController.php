@@ -28,14 +28,15 @@ class LoginController extends Controller
         $password = $_POST["passwordLogin"];
 
         if($email == "FlaviusZichil@admin.com" && $password == "houses22"){
-            $admin = new Admin();
-            $admin->loginAdmin();
+            session_start();
+            $_SESSION["adminStatus"] = "LoggedIn";
+            header("Location: /admin/");
         }
         else{
             $user = new User();
             if($user->loginUser($email, $password)){
                 session_start();
-                $currentUser = $user->getRowByField("email", $email);
+                $currentUser = $user->findOne(["email" => $email]);
 
                 $_SESSION["user_id"] = $currentUser->user_id;
                 $_SESSION["firstName"] = $currentUser->first_name;

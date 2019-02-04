@@ -21,10 +21,4 @@ class UserTrips extends Model
         $stmt->execute([$user_id, $trip_id]);
         return $stmt->fetch();
     }
-
-    public function addTripForUser($userId, string $tripId){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("INSERT INTO $this->table (user_id, trip_id) VALUES(?, ?)");
-        $stmt->execute([$userId, $tripId]);
-    }
 }

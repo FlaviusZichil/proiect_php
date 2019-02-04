@@ -1,16 +1,22 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: FlaviusZichil
+ * Date: 2/3/2019
+ * Time: 2:11 PM
+ */
 
 namespace App\Guards;
-
 use Framework\Guard;
 
-class Authenticated implements Guard
+
+class AdminAutenticated implements Guard
 {
     public function handle(array $params = null)
     {
         session_start();
 
-        if(!isset($_SESSION['firstName']))
+        if(!isset($_SESSION['adminStatus']))
         {
             $this->reject();
         }

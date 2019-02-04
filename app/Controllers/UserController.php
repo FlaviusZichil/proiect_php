@@ -14,7 +14,7 @@ class UserController extends Controller
     // /user/
     public function userPageAction(){
         $trip = new Trip();
-        $allTrips = $trip->getAllByField("status", "Activa");
+        $allTrips = $trip->findAll(["status" => "Activa"]);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("User/userView.html", ["allTrips" => $allTrips]);
@@ -37,7 +37,7 @@ class UserController extends Controller
         // tests if register for trip button has been pressed and if the user is not already registered for selected trip
         if(isset($_POST['registerForTripId']) && !$this->isAlreadyRegisteredForThisTrip($_SESSION["user_id"], $_POST['registerForTripId'])){
             // adds the selected trip to user_trips
-            $userTrips->addTripForUser($_SESSION["user_id"], $_POST['registerForTripId']);
+            $userTrips->new(["user_id" => $_SESSION["user_id"], "trip_id" => $_POST["registerForTripId"]]);
             // gets number of participants for selected trip
             $numberOfParticipants = $trip->getFieldBy("locuri_disponibile", "trip_id", $_POST["registerForTripId"]);
             // decreases the number of participants for selected trip with 1
@@ -77,7 +77,7 @@ class UserController extends Controller
     public function userPersonalDataPageAction(){
         $user = new User();
         // gets user by email
-        $userToDisplay = $user->getRowByField("email", $_SESSION["email"]);
+        $userToDisplay = $user->findOne(["email" => $_SESSION["email"]]);
 
         /** @noinspection PhpVoidFunctionResultUsedInspection */
         echo $this->view("User/personalData.html", ["first_name" =>  $userToDisplay->first_name,
@@ -98,7 +98,7 @@ class UserController extends Controller
         if($validator->isNameValid($firstName) && $validator->isNameValid($secondName) && $validator->isPasswordValid($password)){
             $pass = password_hash($password, PASSWORD_DEFAULT);
             // updates the user with the new data
-            $user->updateUser($firstName, $secondName, $pass);
+            $user->update(["email" => $_SESSION["email"]], ["first_name" => $firstName, "second_name" => $secondName, "password" => $pass]);
             $this->userPersonalDataPageAction();
         }else{
             header("Location: /user/personaldata/");

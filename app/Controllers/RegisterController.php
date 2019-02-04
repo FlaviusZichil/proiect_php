@@ -32,7 +32,7 @@ class RegisterController extends Controller
         if($this->isValidFormData($firstName, $secondName, $email, $password) && !$validator->isEmailTaken($email)){
             $user = new User();
             // registers the user
-            $user->registerUser($firstName, $secondName, $email, $password);
+            $user->new(["first_name" => $firstName, "second_name" => $secondName, "email" => $email, "password" => password_hash($password, PASSWORD_DEFAULT)]);
             // gets current user id
             $addedUserID = $user->getFieldBy("user_id", "email", $email);
             // starts the session and adds user data to it

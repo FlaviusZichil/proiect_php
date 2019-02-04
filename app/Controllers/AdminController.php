@@ -44,7 +44,7 @@ class AdminController extends Controller
         // tests if set finished button pressed
         if(isset($_POST["setFinalizedTripId"])){
             // sets trip status to finished
-            $trip->setTripFinalized($_POST["setFinalizedTripId"], "Finalizata");
+            $trip->update(["trip_id" => $_POST["setFinalizedTripId"]], ["status" => "Finalizata"]);
             // adds medals to all users that participated to the trip that was set to finished
             $this->addMedalForUser($_POST["setFinalizedTripId"]);
         }
@@ -66,7 +66,7 @@ class AdminController extends Controller
         // get all user's ids that participated to selected trip
         $allUserIdsForThisTrip = $userTrips->getUserIdsFromUserTrips($tripId);
         // gets all about selected trip
-        $selectedTrip = $trip->getRowByField("trip_id", $tripId);
+        $selectedTrip = $trip->findOne(["trip_id" => $tripId]);
         // gets medal id for medal that has the same location as selected trip
         $medalId = $medal->getFieldBy("medal_id", "location", $selectedTrip->location);
 
@@ -75,7 +75,7 @@ class AdminController extends Controller
             if($medalId != null) {
                 if(!$medal->hasAlreadyThisMedal($userId->user_id, $medalId->medal_id)){
                     // adds the medal to the user
-                    $userMedals->addMedalForUser($userId->user_id, $medalId->medal_id);
+                    $userMedals->new(["user_id" => $userId->user_id, "medal_id" => $medalId->medal_id]);
                 }
             }
         }
@@ -135,7 +135,7 @@ class AdminController extends Controller
         if($validator->isNameValid($newLocation) && $newAltitude && $newStartDate && $newEndDate && $newAvailableRegistrations){
             $trip = new Trip();
             // adds new trip to DB
-            $trip->addNewTrip($newLocation, $newAltitude, $newStartDate, $newEndDate, $newAvailableRegistrations);
+            $trip->new(["location" => $newLocation, "altitude" => $newAltitude, "start_date" => $newStartDate, "end_date" => $newEndDate, "locuri_disponibile" => $newAvailableRegistrations]);
             $successMessage = "Calatorie adaugata cu succes";
         }
         elseif(!$newLocation || !$newAltitude || !$newStartDate || !$newEndDate){
@@ -175,7 +175,8 @@ class AdminController extends Controller
             && $validator->isNameValid($newGuideCity)){
             $guide = new Guide();
             // adds new guide to DB
-            $guide->addNewGuide($newGuideFirstName, $newGuideSecondName, $newGuideExperience, $newGuideCity);
+            $guide->new(["first_name" => $newGuideFirstName, "second_name" => $newGuideSecondName, "years_of_experience" => $newGuideExperience, "city" => $newGuideCity]);
+
             $successMessage = "Ghid adaugat cu success";
         }
         elseif(!$newGuideFirstName || !$newGuideSecondName || !$newGuideCity){

@@ -9,24 +9,9 @@ class Trip extends Model
     protected $table = "trip";
 
     public function modifyNumberOfParticipantsForTrip($tripId, $numberOfParticipants){
-        $db = $this->newDbCon();
-
         if($numberOfParticipants != 1) {
-            $stmt = $db->prepare("UPDATE $this->table SET locuri_disponibile=? WHERE trip_id=?");
-            $stmt->execute([$numberOfParticipants, $tripId]);
+            $this->update(["trip_id" => $tripId], ["locuri_disponibile" => $numberOfParticipants]);
         }
-    }
-
-    public function setTripFinalized($tripId, $status){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("UPDATE $this->table SET status=? WHERE trip_id=?");
-        $stmt->execute([$status, $tripId]);
-    }
-
-    public function addNewTrip($location, $altitude, $startDate, $endDate, $locuri){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("INSERT INTO $this->table(location, altitude, start_date, end_date, locuri_disponibile) VALUES(?, ?, ?, ?, ?)");
-        $stmt->execute([$location, $altitude, $startDate, $endDate, $locuri]);
     }
 
     public function getAllTripsForUser(string $email){

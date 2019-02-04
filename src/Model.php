@@ -35,6 +35,75 @@ abstract class Model
         }
     }
 
+    protected function prepareDataForSearchStmt(array $data, bool $like): array
+    {
+        $columns = '';
+        $values = [];
+        $i = 1;
+        $searchStr = "=";
+        if ($like) {
+            $searchStr = " LIKE ";
+        }
+        foreach($data as $key => $value) {
+            $values[]= $value;
+            $columns .= $key . $searchStr . "?";
+            //if we are not at the last element with the iteration
+            if($i < (count($data))) {
+                $columns .= " AND ";
+            }
+            $i++;
+        }
+        return [$columns, $values];
+    }
+
+    private function prepareStmt(array $data): array{
+        $i = 1;
+        $columns = '';
+        $values = [];
+        foreach ($data as $key => $value) {
+            $values[] = $value;
+            $columns .= $key .'=?';
+            if($i < (count($data))) {
+                $columns .= ", ";
+            }
+            $i++;
+        }
+        return [$columns, $values];
+    }
+
+    public function findOne(array $data, bool $like = false){
+        list($columns, $values) = $this->prepareDataForSearchStmt($data, $like);
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * from $this->table WHERE $columns");
+        $stmt->execute($values);
+        return $stmt->fetch();
+    }
+
+    public function findAll(array $data, bool $like = false){
+        list($columns, $values) = $this->prepareDataForSearchStmt($data, $like);
+        $db = $this->newDbCon();
+        $stmt = $db->prepare("SELECT * from $this->table WHERE $columns");
+        $stmt->execute($values);
+        return $stmt->fetchAll();
+    }
+
+    public function new(array $data): int{
+        list($columns, $values) = $this->prepareStmt($data);
+        $db = $this->newDbCon();
+        $stmt = $db->prepare('INSERT INTO ' . $this->table . ' SET ' . $columns);
+        $stmt->execute($values);
+        return $db->lastInsertId();
+    }
+
+    public function update(array $where, array $data): bool
+    {
+        list($columns, $values) = $this->prepareStmt($data);
+        $values[] = reset($where);
+        $db = $this->newDbCon();
+        $stmt = $db->prepare('UPDATE ' . $this->table . ' SET ' . $columns . ' WHERE ' . key($where) . '=?');
+        return $stmt->execute($values);
+    }
+
     public function getAll(): array{
         $db = $this->newDbCon();
         $stmt = $db->query("SELECT * FROM $this->table");
@@ -49,20 +118,10 @@ abstract class Model
         return $stmt->fetch();
     }
 
-    public function getRowByField($field, $data){
+    public function getAllOrderBY(string $way, $column){
         $db = $this->newDbCon();
-        $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $field . '=?';
-        $stmt = $db->prepare($sql);
-        $stmt->execute([$data]);
-        return $stmt->fetch();
-    }
-
-    public function getAllByField($field, $data){
-        $db = $this->newDbCon();
-        $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $field . '=?';
-        $stmt = $db->prepare($sql);
-        $stmt->execute([$data]);
-
+        $stmt = $db->prepare("SELECT * FROM $this->table ORDER BY $column $way");
+        $stmt->execute();
         return $stmt->fetchAll();
     }
 
@@ -70,18 +129,5 @@ abstract class Model
         $db = $this->newDbCon();
         $stmt = $db->prepare("DELETE FROM $this->table WHERE $column=?");
         $stmt->execute([$id]);
-    }
-
-    public function modifyFieldById($field, $id){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare('UPDATE ' . $this->table . ' SET ' . $field .'=?' . ' WHERE ' . $id . '=?');
-        $stmt->execute([$field, $id]);
-    }
-
-    public function getAllOrderBY(string $way, $column){
-        $db = $this->newDbCon();
-        $stmt = $db->prepare("SELECT * FROM $this->table ORDER BY $column $way");
-        $stmt->execute();
-        return $stmt->fetchAll();
     }
 }

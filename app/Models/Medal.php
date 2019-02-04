@@ -10,7 +10,7 @@ class Medal extends Model
 
     public function hasAlreadyThisMedal($userId, $medalId){
         $userMedals = new UserMedals();
-        if($userMedals->checkUserForMedal($userId, $medalId)){
+        if($userMedals->findOne(["user_id" => $userId, "medal_id" => $medalId])){
             return true;
         }
         return false;
